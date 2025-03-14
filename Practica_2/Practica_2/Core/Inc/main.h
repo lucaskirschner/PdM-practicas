@@ -41,6 +41,7 @@ extern "C" {
 
 typedef uint32_t tick_t;
 typedef bool bool_t;
+
 typedef struct{
    tick_t startTime;
    tick_t duration;
@@ -64,9 +65,9 @@ void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
 
-void delayInit( delay_t * delay, tick_t duration );
-bool_t delayRead( delay_t * delay );
-void delayWrite( delay_t * delay, tick_t duration );
+void 	delayInit (delay_t * delay, tick_t duration);
+void 	delayWrite(delay_t * delay, tick_t duration);
+bool_t 	delayRead (delay_t * delay);
 
 /* USER CODE END EFP */
 
@@ -88,7 +89,7 @@ void delayWrite( delay_t * delay, tick_t duration );
 
 /* USER CODE BEGIN Private defines */
 
-#define DUTY 250;	// Duty de parpadeo del LED
+#define DUTY 100;	// Duty de parpadeo del LED
 
 /* USER CODE END Private defines */
 
