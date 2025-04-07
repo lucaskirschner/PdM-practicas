@@ -1,6 +1,6 @@
 /**
  * @file    API_uart.c
- * @author  Lucas Kirschner
+ * @author  Ing. Lucas Kirschner
  * @date    April 3, 2025
  * @brief   Implementación de la API de manejo de UART para STM32.
  *

@@ -1,8 +1,8 @@
 /**
  * @file API_debounce.h
- * @brief API para gestión de botones con lógica de antirrebote mediante una máquina de estados finita (FSM).
- * @author Lucas Kirschner
+ * @author Ing. Lucas Kirschner
  * @date 27 Mar 2025
+ * @brief API para gestión de botones con lógica de antirrebote mediante una máquina de estados finita (FSM).
  */
 
 #ifndef API_INC_API_DEBOUNCE_H_
@@ -34,6 +34,7 @@ typedef struct {
 	debounceState_t state;    /**< Estado actual de la FSM */
 	delay_t delay;            /**< Retardo software para antirrebote */
 	bool_t fallingFlag;       /**< Flag de pulsación detectada */
+	bool_t risingFlag;        /**< Flag de soltado detectada */
 } debounce_t;
 
 /**
@@ -55,9 +56,23 @@ debounceState_t debounceFSM_update(debounce_t* btn);
 /**
  * @brief Consulta si ocurrió una pulsación del botón (flanco descendente).
  *
+ * Esta función retorna `true` una sola vez si se ha detectado un flanco descendente
+ * válido desde la última vez que fue llamada. Luego, el flag interno se limpia automáticamente.
+ *
  * @param btn Puntero a la estructura debounce_t asociada al botón.
- * @return true si se detectó una pulsación, false en caso contrario.
+ * @return `true` si se detectó una pulsación desde la última lectura, `false` en caso contrario.
  */
-bool_t readKey(debounce_t* btn);
+bool_t readKeyPressed(debounce_t* btn);
+
+/**
+ * @brief Consulta si ocurrió una liberación del botón (flanco ascendente).
+ *
+ * Esta función retorna `true` una sola vez si se ha detectado un flanco ascendente
+ * válido desde la última vez que fue llamada. Luego, el flag interno se limpia automáticamente.
+ *
+ * @param btn Puntero a la estructura debounce_t asociada al botón.
+ * @return `true` si se detectó una liberación desde la última lectura, `false` en caso contrario.
+ */
+bool_t readKeyReleased(debounce_t* btn);
 
 #endif /* API_INC_API_DEBOUNCE_H_ */

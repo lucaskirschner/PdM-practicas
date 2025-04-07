@@ -1,8 +1,8 @@
 /**
  * @file API_debounce.c
- * @brief API para gestión de botones con lógica de antirrebote mediante una máquina de estados finita (FSM).
- * @author Lucas Kirschner
+ * @author Ing. Lucas Kirschner
  * @date 27 Mar 2025
+ * @brief API para gestión de botones con lógica de antirrebote mediante una máquina de estados finita (FSM).
  */
 
 #include "API_debounce.h"
@@ -21,13 +21,13 @@ static void buttonPressed(debounce_t* btn)
 }
 
 /**
- * @brief Callback privado que se ejecuta al detectar la liberación del botón.
+ * @brief Callback privado que se ejecuta al detectar la liberación del botón válida.
  *
  * @param btn Puntero a la estructura debounce_t correspondiente.
  */
 static void buttonReleased(debounce_t* btn)
 {
-	// No hace nada por ahora
+	btn->risingFlag = true;
 }
 
 /**
@@ -132,11 +132,21 @@ debounceState_t debounceFSM_update(debounce_t* btn)
 	return btn->state;											// Nunca llegará a esta condición
 }
 
-bool_t readKey(debounce_t* btn)
+bool_t readKeyPressed(debounce_t* btn)
 {
 	if (btn->fallingFlag)
 	{
 		btn->fallingFlag = false;
+		return true;
+	}
+	return false;
+}
+
+bool_t readKeyReleased(debounce_t* btn)
+{
+	if (btn->risingFlag)
+	{
+		btn->risingFlag = false;
 		return true;
 	}
 	return false;

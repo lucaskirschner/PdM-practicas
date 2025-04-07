@@ -21,7 +21,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "API_uart.h"
+#include "API_uart.h"			/* Manejo de la comunicación serie 	*/
+#include "API_debounce.h"		/* Manejo de lecturas de pulsadores	*/
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -43,8 +44,8 @@
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
-UART_Port_t uartPort;
-
+UART_Port_t uartPort;		/* Instancia para manejo de la comunicación serie */
+debounce_t  blueBtn;		/* Instancia para manejo del botón 				  */
 
 /* USER CODE END PV */
 
@@ -94,7 +95,8 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  uartInit(&uartPort, &huart2);
+  uartInit(&uartPort, &huart2);							/* Inicialización de UART */
+  debounceFSM_init(&blueBtn, B1_GPIO_Port, B1_Pin); 	/* Inicialización de botón*/
 
   /* USER CODE END 2 */
 
@@ -102,7 +104,16 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
+	debounceFSM_update(&blueBtn);
+	if(readKeyPressed(&blueBtn))
+	{
+		uartSendString(&uartPort, (uint8_t *) "Flanco ascendente detectado\r\n");
+	}
 
+	if(readKeyReleased(&blueBtn))
+	{
+		uartSendString(&uartPort, (uint8_t *) "Flanco descendente detectado\r\n");
+	}
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */

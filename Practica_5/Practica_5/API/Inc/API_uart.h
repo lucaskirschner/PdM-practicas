@@ -1,6 +1,6 @@
 /**
  * @file    API_uart.h
- * @author  Lucas Kirschner
+ * @author  Ing. Lucas Kirschner
  * @date    April 3, 2025
  * @brief   Interfaz de alto nivel para el manejo de la UART usando STM32 HAL.
  *
