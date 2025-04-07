@@ -1,180 +1,144 @@
-/*
- * API_debounce.c
- *
- *  Created on: Mar 27, 2025
- *      Author: Lucas Kirschner
+/**
+ * @file API_debounce.c
+ * @brief API para gestión de botones con lógica de antirrebote mediante una máquina de estados finita (FSM).
+ * @author Lucas Kirschner
+ * @date 27 Mar 2025
  */
 
 #include "API_debounce.h"
-#include "API_delay.h"
 #include "API_swo.h"
-#include "stm32f4xx_hal.h"
 
-#define DEBOUNCE_DELAY 40				// Delay del antirrebote por software
+#define DEBOUNCE_DELAY 40
 
-#define B1_Pin GPIO_PIN_13
-#define B1_GPIO_Port GPIOC
-
-typedef enum{							// Estados de la FSM
-	BUTTON_UP,
-	BUTTON_FALLING,
-	BUTTON_DOWN,
-	BUTTON_RISING,
-} debounceState_t;
-
-static delay_t delay;
-static debounceState_t debounce;
-static bool_t fallingFlag;
-
-static void buttonPressed(void);
-static void buttonReleased(void);
-static bool_t buttonState(void);
-static void Error_Handler(void);
-
-
-/* debounceFSM_init: Establece estado inicial de la máquina de estados y delay del retardo por software.
- * se llama una vez al inicio o al ocurrir un default por estado inconsistente.
- * Parametros:
- *  void
- * Retorna:
- * 	void
+/**
+ * @brief Callback privado que se ejecuta al detectar una pulsación válida.
+ *
+ * @param btn Puntero a la estructura debounce_t correspondiente.
  */
-void debounceFSM_init(void)
+static void buttonPressed(debounce_t* btn)
 {
-	delayInit(&delay,DEBOUNCE_DELAY);	// Establece delay de la FSM
-	debounce = BUTTON_UP;				// Estado inicial de la FSM
+	btn->fallingFlag = true;
 }
 
-
-/* debounceFSM_update: Controla toda la lógica de la FSM. Se llama en cada iteración en el super-loop.
- * Parametros:
- *  void
- * Retorna:
- * 	void
+/**
+ * @brief Callback privado que se ejecuta al detectar la liberación del botón.
+ *
+ * @param btn Puntero a la estructura debounce_t correspondiente.
  */
-void debounceFSM_update(void)
+static void buttonReleased(debounce_t* btn)
 {
-	switch (debounce)
-	{
-		case BUTTON_UP:
-			if(buttonState())									// Si se detecto un cambio
-			{
-				delayRead(&delay);								// Inicio el retardo
-				debounce = BUTTON_FALLING;						// Paso a modo falling
-				printf("BUTTON_UP -> BUTTON_FALLING\n");		// Salida SWO para debbuging
-			}
-			break;
-		case BUTTON_FALLING:
-			if(delayRead(&delay))								// Si se cumplió el tiempo de retardo
-			{
-				if(buttonState())								// Vuelvo a preguntar por el estado del botón
-				{
-					buttonPressed(); 							// Hago tarea al pulsar el botón
-					debounce = BUTTON_DOWN;						// Paso al estado down
-					printf("BUTTON_FALLING -> BUTTON_DOWN\n");	// Salida SWO para debbuging
-				}
-				else											// Si no sigue pulsado
-				{
-					debounce = BUTTON_UP;						// Vuelvo al estado up
-					printf("BUTTON_FALLING -> BUTTON_UP\n");	// Salida SWO para debbuging
-				}
-			}
-			break;
-		case BUTTON_DOWN:
-			if(!buttonState())									// Si se detecto un cambio
-			{
-				delayRead(&delay);								// Inicio el retardo
-				debounce = BUTTON_RISING;						// Paso a modo rissing
-				printf("BUTTON_DOWN -> BUTTON_RISING\n");		// Salida SWO para debbuging
-			}
-			break;
-		case BUTTON_RISING:
-			if(delayRead(&delay))								// Si se cumplió el tiempo de retardo
-			{
-				if(!buttonState())								// Vuelvo a preguntar por el estado del botón
-				{
-					buttonReleased(); 							// Hago tarea al soltar el botón
-					debounce = BUTTON_UP;						// Paso al estado up
-					printf("BUTTON_RISING -> BUTTON_UP\n");		// Salida SWO para debbuging
-				}
-				else											// Si no sigue pulsado
-				{
-					debounce = BUTTON_DOWN;						// Vuelvo al estado down
-					printf("BUTTON_RISING -> BUTTON_DOWN\n");	// Salida SWO para debbuging
-				}
-			}
-			break;
-		default: Error_Handler();								// En otro caso, acuso error fatal
-	};
+	// No hace nada por ahora
 }
 
-
-/* buttonPressed: realiza las tareas correspondientes al pulsar el botón, en este caso, poner un flag interno en true.
- * Parametros:
- *  void
- * Retorna:
- * 	void
+/**
+ * @brief Lee el estado lógico del pin del botón (invertido).
+ *
+ * @param btn Puntero a la estructura debounce_t correspondiente.
+ * @return true si el botón está presionado, false si está liberado.
  */
-static void buttonPressed(void)
+static bool_t buttonState(debounce_t* btn)
 {
-	fallingFlag = true;
+	return !HAL_GPIO_ReadPin(btn->port, btn->pin);
 }
 
-/* buttonReleased: realiza las tareas correspondientes al soltar el botón, en este caso, no hace nada.
- * Parametros:
- *  void
- * Retorna:
- * 	void
- */
-static void buttonReleased(void)
-{
-	/* No se hace nada en este caso */
-}
-
-
-/* readKey: Retorna true si se ha detectado una pulsación del botón y restablece el flag intenro indicativo
- * Parametros:
- *  void
- * Retorna:
- * 	bool_t:
- * 		true: si ocurrio una pulsación
- * 		false: si no ocurrio la pulsación
- */
-bool_t readKey(void)
-{
-	if(fallingFlag)
-	{
-		fallingFlag = false;
-		return true;
-	}
-	else
-	{
-		return false;
-	}
-}
-
-/* buttonState: Retorna estado del boton de usuario
- * Parametros:
- * 	void
- * Retorna:
- * 	bool_t:
- * 		true: botón pulsado
- * 		false: botón sin pulsar
- */
-static bool_t buttonState(void)
-{
-	return !HAL_GPIO_ReadPin(B1_GPIO_Port, B1_Pin);
-}
-
-/* Error_Handler: Handler que se ejecuta en caso de error fatal
- * Parametros:
- * 	void
- * Retorna:
- * 	void
+/**
+ * @brief Manejo de error en caso de estado inválido.
  */
 static void Error_Handler(void)
 {
-	  __disable_irq();
-	  while (1){}
+	__disable_irq();
+	while (1) {}
+}
+
+void debounceFSM_init(debounce_t* btn, GPIO_TypeDef* port, uint16_t pin)
+{
+	btn->port = port;
+	btn->pin = pin;
+	btn->state = BUTTON_UP;
+	btn->fallingFlag = false;
+	delayInit(&btn->delay, DEBOUNCE_DELAY);
+}
+
+debounceState_t debounceFSM_update(debounce_t* btn)
+{
+	switch (btn->state)
+	{
+		case BUTTON_UP:
+			if (buttonState(btn)) 								// Si se detecta un posible flanco descendente
+			{
+				delayRead(&btn->delay); 						// Se inicia el retardo de confirmación
+				btn->state = BUTTON_FALLING; 					// Se pasa al estado de validación de pulsación
+				printf("BUTTON_UP -> BUTTON_FALLING\n"); 		// Salida por consola para debug
+			}
+			return BUTTON_UP;
+			break;
+
+		case BUTTON_FALLING:
+			if (delayRead(&btn->delay)) 						// Si se cumplió el tiempo de retardo
+			{
+				if (buttonState(btn)) 							// Se confirma que el botón sigue presionado
+				{
+					buttonPressed(btn); 						// Acción asociada al evento de pulsación
+					btn->state = BUTTON_DOWN; 					// Se pasa al estado presionado
+					printf("BUTTON_FALLING -> BUTTON_DOWN\n");
+
+					return BUTTON_FALLING;						// Informo que se produjo un flanco descendente valido
+				}
+				else 											// Se descartó el flanco por rebote
+				{
+					btn->state = BUTTON_UP;					 	// Se vuelve al estado sin presionar
+					printf("BUTTON_FALLING -> BUTTON_UP\n");
+
+					return BUTTON_UP;
+				}
+			}
+			break;
+
+		case BUTTON_DOWN:
+			if (!buttonState(btn)) 								// Si se detecta un posible flanco ascendente
+			{
+				delayRead(&btn->delay); 						// Se inicia el retardo de confirmación
+				btn->state = BUTTON_RISING; 					// Se pasa al estado de validación de liberación
+				printf("BUTTON_DOWN -> BUTTON_RISING\n");
+			}
+			return BUTTON_DOWN;
+			break;
+
+		case BUTTON_RISING:
+			if (delayRead(&btn->delay)) 						// Si se cumplió el tiempo de retardo
+			{
+				if (!buttonState(btn)) 							// Se confirma que el botón está liberado
+				{
+					buttonReleased(btn); 						// Acción asociada al evento de liberación
+					btn->state = BUTTON_UP; 					// Se vuelve al estado sin presionar
+					printf("BUTTON_RISING -> BUTTON_UP\n");
+
+					return BUTTON_RISING;						// Informo que se produjo un flanco ascendente valido
+				}
+				else 											// Se descartó el flanco por rebote
+				{
+					btn->state = BUTTON_DOWN;					// Se vuelve al estado presionado
+					printf("BUTTON_RISING -> BUTTON_DOWN\n");
+
+					return BUTTON_DOWN;
+				}
+			}
+			break;
+
+		default:
+			Error_Handler(); 									// Manejo de error por estado inválido
+	}
+
+	return btn->state;											// Nunca llegará a esta condición
+}
+
+bool_t readKey(debounce_t* btn)
+{
+	if (btn->fallingFlag)
+	{
+		btn->fallingFlag = false;
+		return true;
+	}
+	return false;
 }
 

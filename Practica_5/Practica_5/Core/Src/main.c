@@ -43,6 +43,7 @@
 UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
+UART_Port_t uartPort;
 
 
 /* USER CODE END PV */
@@ -93,7 +94,7 @@ int main(void)
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
 
-  uartInit();
+  uartInit(&uartPort, &huart2);
 
   /* USER CODE END 2 */
 
