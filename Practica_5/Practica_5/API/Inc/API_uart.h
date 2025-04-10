@@ -67,4 +67,10 @@ bool_t uartSendStringSize(UART_Port_t *port, uint8_t *pstring, uint16_t size);
  */
 bool_t uartReceiveStringSize(UART_Port_t *port, uint8_t *pstring, uint16_t size);
 
+/**
+ * @brief Limpia la pantalla del terminal y muestra la configuración UART.
+ * @param port Puntero a la estructura UART_Port_t que representa el puerto UART.
+ */
+void terminalClearScreen(UART_Port_t *port);
+
 #endif /* INC_API_UART_H_ */

@@ -17,6 +17,7 @@
 #include <stdio.h>
 
 #define UART_MAX_SIZE 128  /**< Tamaño máximo para buffers de transmisión/recepción */
+#define UART_DELAY_MS 10   /**< Delay en ms de recpeción uart						*/
 
 /**
  * @brief Obtiene el largo de palabra configurado en la UART como carácter.
@@ -63,6 +64,21 @@ static const char getStopBits(UART_HandleTypeDef *phuart)
     }
 }
 
+/**
+ * @brief Imprime por UART la configuración del puerto UART.
+ * @param port Puntero a la estructura UART_Port_t que representa el puerto UART.
+ */
+static void printUartConfig(UART_Port_t *port) {
+    char msg[UART_MAX_SIZE];
+
+    snprintf(msg, sizeof(msg), "UART Initialized: @%lu %c%c%c\r\n",
+             port->huart->Init.BaudRate,
+             getWordLength(port->huart),
+             getParity(port->huart),
+             getStopBits(port->huart));
+    uartSendString(port, (uint8_t *)msg);
+}
+
 bool_t uartInit(UART_Port_t *port, UART_HandleTypeDef *huart)
 {
     if (port == NULL || huart == NULL) return false;
@@ -70,27 +86,23 @@ bool_t uartInit(UART_Port_t *port, UART_HandleTypeDef *huart)
     port->huart = huart;
     port->initialized = true;
 
-    char msg[UART_MAX_SIZE];
-    snprintf(msg, sizeof(msg), "UART Initialized: @%lu %c%c%c\r\n",
-             huart->Init.BaudRate,
-             getWordLength(port->huart),
-             getParity(port->huart),
-             getStopBits(port->huart));
-
-    uartSendString(port, (uint8_t *)msg);
+    printUartConfig(port);
 
     return true;
 }
 
-bool_t  uartSendString(UART_Port_t *port, uint8_t *pstring) {
+bool_t  uartSendString(UART_Port_t *port, uint8_t *pstring)
+{
     if (port == NULL || pstring == NULL) return false;
+
     if (HAL_UART_Transmit(port->huart, pstring, strlen((char *)pstring), HAL_MAX_DELAY) != HAL_OK)
         return false;
 
     return true;
 }
 
-bool_t  uartSendStringSize(UART_Port_t *port, uint8_t *pstring, uint16_t size) {
+bool_t  uartSendStringSize(UART_Port_t *port, uint8_t *pstring, uint16_t size)
+{
     if (port == NULL || pstring == NULL || size == 0 || size > UART_MAX_SIZE) return false;
 
     if (HAL_UART_Transmit(port->huart, pstring, size, HAL_MAX_DELAY) != HAL_OK)
@@ -102,8 +114,16 @@ bool_t  uartSendStringSize(UART_Port_t *port, uint8_t *pstring, uint16_t size) {
 bool_t  uartReceiveStringSize(UART_Port_t *port, uint8_t *pstring, uint16_t size) {
     if (port == NULL || pstring == NULL || size == 0 || size > UART_MAX_SIZE) return false;
 
-    if (HAL_UART_Receive(port->huart, pstring, size, HAL_MAX_DELAY) != HAL_OK)
+    if (HAL_UART_Receive(port->huart, pstring, size, UART_DELAY_MS) != HAL_OK)
     	return false;
 
     return true;
+}
+
+void terminalClearScreen(UART_Port_t *port)
+{
+	const char *clear_cmd = "\x1b[2J\x1b[H";			/**< Borra pantalla y lleva cursor al inicio	*/
+	uartSendString(port, (uint8_t *)clear_cmd);
+
+	printUartConfig(port);
 }

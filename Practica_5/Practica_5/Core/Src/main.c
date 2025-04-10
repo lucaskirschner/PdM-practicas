@@ -21,8 +21,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "API_uart.h"			/* Manejo de la comunicación serie 	*/
-#include "API_debounce.h"		/* Manejo de lecturas de pulsadores	*/
+#include "API_uart.h"			/* Manejo de la comunicación serie 		*/
+#include "API_debounce.h"		/* Manejo de lecturas de pulsadores		*/
+#include "API_delay.h"			/* Manejo de retardos no bloqueantes	*/
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -46,6 +47,7 @@ UART_HandleTypeDef huart2;
 /* USER CODE BEGIN PV */
 UART_Port_t uartPort;		/* Instancia para manejo de la comunicación serie */
 debounce_t  blueBtn;		/* Instancia para manejo del botón 				  */
+uint8_t rxData[1];			/* Buffer de recepción de 'c'					  */
 
 /* USER CODE END PV */
 
@@ -114,6 +116,15 @@ int main(void)
 	{
 		uartSendString(&uartPort, (uint8_t *) "Flanco descendente detectado\r\n");
 	}
+
+	if(uartReceiveStringSize(&uartPort, rxData, 1))
+	{
+		if(rxData[0] == 'c')
+		{
+			terminalClearScreen(&uartPort);
+		}
+	}
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -241,6 +252,11 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+void HAL_UARTEx_RxEventCallback(UART_HandleTypeDef *huart, uint16_t Size)
+{
+
+}
 
 /* USER CODE END 4 */
 
