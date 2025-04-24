@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BMP280_Display_Station: Referencia del archivo C:/Users/Noxie/Desktop/PdM-practicas/Trabajo_Final/BMP280_Display_Station/Core/API/BMP280/Src/BMP280.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">BMP280_Display_Station<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Trabajo práctico final - PCSE - PdM - CESE</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e2b2265a4c9bde5c5d6085b1fcc82cb8.html">BMP280_Display_Station</a></li><li class="navelem"><a class="el" href="dir_446b09c6b56895b377ee9d9e29f9c883.html">Core</a></li><li class="navelem"><a class="el" href="dir_8835e12ddf74463c939342ccbda43e39.html">API</a></li><li class="navelem"><a class="el" href="dir_6cc249425bd7640a1787c10d39c7c600.html">BMP280</a></li><li class="navelem"><a class="el" href="dir_c9342d9caa7e38000acb3041daeb5029.html">Src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Estructuras de datos</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo BMP280.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implementación del driver para el sensor BMP280 mediante comunicación SPI.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_b_m_p280_8h_source.html">BMP280.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_a_p_i__swo_8h_source.html">API_swo.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbmp280__calib__data__t.html">bmp280_calib_data_t</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:ac13b8493cf5593d1ba508df61594fbc6" id="r_ac13b8493cf5593d1ba508df61594fbc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac13b8493cf5593d1ba508df61594fbc6">BMP280_Init</a> (void)</td></tr>
+<tr class="memdesc:ac13b8493cf5593d1ba508df61594fbc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa el sensor BMP280.  <br /></td></tr>
+<tr class="separator:ac13b8493cf5593d1ba508df61594fbc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4920d1ce107cf5a4b9ee660c8018a977" id="r_a4920d1ce107cf5a4b9ee660c8018a977"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4920d1ce107cf5a4b9ee660c8018a977">BMP280_Trigger_Measurement</a> (void)</td></tr>
+<tr class="memdesc:a4920d1ce107cf5a4b9ee660c8018a977"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispara una medición en modo FORCED.  <br /></td></tr>
+<tr class="separator:a4920d1ce107cf5a4b9ee660c8018a977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a703f334cc6707a47c92281e56f931efe" id="r_a703f334cc6707a47c92281e56f931efe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a703f334cc6707a47c92281e56f931efe">BMP280_Is_Measuring</a> (void)</td></tr>
+<tr class="memdesc:a703f334cc6707a47c92281e56f931efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica si el sensor aún se encuentra realizando una medición.  <br /></td></tr>
+<tr class="separator:a703f334cc6707a47c92281e56f931efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a110143363c60ab804fe486496d8bbd18" id="r_a110143363c60ab804fe486496d8bbd18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a110143363c60ab804fe486496d8bbd18">BMP280_Update_Parameters</a> (<a class="el" href="structbmp280__t.html">bmp280_t</a> *dev)</td></tr>
+<tr class="memdesc:a110143363c60ab804fe486496d8bbd18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Actualiza los valores de temperatura y presión del sensor.  <br /></td></tr>
+<tr class="separator:a110143363c60ab804fe486496d8bbd18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Implementación del driver para el sensor BMP280 mediante comunicación SPI. </p>
+<dl class="section author"><dt>Autor</dt><dd>Ing. Lucas Kirschner </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>2 Apr 2025 </dd></dl>
+<p>Esta implementación incluye funciones para inicializar el sensor, disparar mediciones, leer datos crudos y aplicar compensación según las constantes de calibración internas. Se presta especial atención al correcto manejo del protocolo SPI, los modos de medición, y la lectura en ráfaga de registros, de acuerdo a lo especificado por la hoja de datos del BMP280. </p>
+</div><h2 class="groupheader">Documentación de funciones</h2>
+<a id="ac13b8493cf5593d1ba508df61594fbc6" name="ac13b8493cf5593d1ba508df61594fbc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac13b8493cf5593d1ba508df61594fbc6">&#9670;&#160;</a></span>BMP280_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a> BMP280_Init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa el sensor BMP280. </p>
+<p>Se realiza un envío de paquete dummy para estabilizar la línea SCK (recomendado para SPI), luego se lee el ID del sensor y se configuran los registros <code>config</code> y <code>ctrl_meas</code>. Finalmente, se cargan los coeficientes de calibración. Es importante que la función sea llamada una vez tras energizar el sensor.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>Puntero a la estructura del dispositivo a inicializar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>BMP280_OK si se inicializó correctamente, o un código de error. </dd></dl>
+
+</div>
+</div>
+<a id="a703f334cc6707a47c92281e56f931efe" name="a703f334cc6707a47c92281e56f931efe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a703f334cc6707a47c92281e56f931efe">&#9670;&#160;</a></span>BMP280_Is_Measuring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a> BMP280_Is_Measuring </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica si el sensor aún se encuentra realizando una medición. </p>
+<p>Verifica si el sensor sigue midiendo.</p>
+<p>Esta función consulta el bit de estado <code>measuring</code> del registro STATUS (0xF3).</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>Puntero al dispositivo BMP280. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>BMP280_DATA_RDY si los datos están listos, BMP280_DATA_NOT_RDY si aún mide, o un código de error si la lectura falla. </dd></dl>
+
+</div>
+</div>
+<a id="a4920d1ce107cf5a4b9ee660c8018a977" name="a4920d1ce107cf5a4b9ee660c8018a977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4920d1ce107cf5a4b9ee660c8018a977">&#9670;&#160;</a></span>BMP280_Trigger_Measurement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a> BMP280_Trigger_Measurement </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dispara una medición en modo FORCED. </p>
+<p>Dispara una medición en modo "forced".</p>
+<p>En este modo, el sensor permanece dormido y solo se activa cuando se escribe en <code>ctrl_meas</code>. Una vez finalizada la medición, vuelve automáticamente a SLEEP.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>Puntero a la estructura del dispositivo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>BMP280_OK si el disparo fue exitoso, o un error si el modo no es FORCED. </dd></dl>
+
+</div>
+</div>
+<a id="a110143363c60ab804fe486496d8bbd18" name="a110143363c60ab804fe486496d8bbd18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a110143363c60ab804fe486496d8bbd18">&#9670;&#160;</a></span>BMP280_Update_Parameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a> BMP280_Update_Parameters </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structbmp280__t.html">bmp280_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dev</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Actualiza los valores de temperatura y presión del sensor. </p>
+<p>Lee y compensa los datos de presión y temperatura.</p>
+<p>Aplica las fórmulas de compensación flotante detalladas en la hoja de datos, que utilizan los coeficientes internos previamente cargados. La lectura se basa en los registros de datos crudos, y el orden de las operaciones busca preservar la precisión final.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>Puntero al descriptor del BMP280. La estructura se actualiza con los valores. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>BMP280_OK si se actualizaron correctamente, o un error correspondiente. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

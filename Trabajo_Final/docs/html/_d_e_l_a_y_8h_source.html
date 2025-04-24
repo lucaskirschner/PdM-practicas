@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BMP280_Display_Station: Archivo de código fuente C:/Users/Noxie/Desktop/PdM-practicas/Trabajo_Final/BMP280_Display_Station/Core/API/DELAY/Inc/DELAY.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">BMP280_Display_Station<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Trabajo práctico final - PCSE - PdM - CESE</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e2b2265a4c9bde5c5d6085b1fcc82cb8.html">BMP280_Display_Station</a></li><li class="navelem"><a class="el" href="dir_446b09c6b56895b377ee9d9e29f9c883.html">Core</a></li><li class="navelem"><a class="el" href="dir_8835e12ddf74463c939342ccbda43e39.html">API</a></li><li class="navelem"><a class="el" href="dir_bfa6726570cb3907c047ea9bc75e0857.html">DELAY</a></li><li class="navelem"><a class="el" href="dir_b0b0f8b49365d0b9d533d0c5b6adde81.html">Inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">DELAY.h</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef API_INC_API_DELAY_H_</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define API_INC_API_DELAY_H_</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="foldopen" id="foldopen00022" data-start="{" data-end="};">
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="structdelay__t.html">   22</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="structdelay__t.html#a776f35f97f4e03bed1685798da2dca92">   23</a></span>   uint32_t <a class="code hl_variable" href="structdelay__t.html#a776f35f97f4e03bed1685798da2dca92">startTime</a>;     </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="structdelay__t.html#a49f89df0e765bee620c337c51d397eff">   24</a></span>   uint32_t <a class="code hl_variable" href="structdelay__t.html#a49f89df0e765bee620c337c51d397eff">duration</a>;   </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="structdelay__t.html#a36f7b6be7108281af77939ceaec42fd6">   25</a></span>   <span class="keywordtype">bool</span> <a class="code hl_variable" href="structdelay__t.html#a36f7b6be7108281af77939ceaec42fd6">running</a>;         </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>} <a class="code hl_struct" href="structdelay__t.html">delay_t</a>;</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="keywordtype">void</span> Delay_Init(<a class="code hl_struct" href="structdelay__t.html">delay_t</a> * delay, uint32_t duration);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="keywordtype">void</span> Delay_Write(<a class="code hl_struct" href="structdelay__t.html">delay_t</a> * delay, uint32_t duration);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="keywordtype">bool</span> Delay_Read(<a class="code hl_struct" href="structdelay__t.html">delay_t</a> * delay);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keywordtype">bool</span> Delay_Is_Running(<a class="code hl_struct" href="structdelay__t.html">delay_t</a> *delay);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#endif </span><span class="comment">/* API_INC_API_DELAY_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="astructdelay__t_html"><div class="ttname"><a href="structdelay__t.html">delay_t</a></div><div class="ttdoc">Estructura para manejar retardos no bloqueantes.</div><div class="ttdef"><b>Definition</b> DELAY.h:22</div></div>
+<div class="ttc" id="astructdelay__t_html_a36f7b6be7108281af77939ceaec42fd6"><div class="ttname"><a href="structdelay__t.html#a36f7b6be7108281af77939ceaec42fd6">delay_t::running</a></div><div class="ttdeci">bool running</div><div class="ttdef"><b>Definition</b> DELAY.h:25</div></div>
+<div class="ttc" id="astructdelay__t_html_a49f89df0e765bee620c337c51d397eff"><div class="ttname"><a href="structdelay__t.html#a49f89df0e765bee620c337c51d397eff">delay_t::duration</a></div><div class="ttdeci">uint32_t duration</div><div class="ttdef"><b>Definition</b> DELAY.h:24</div></div>
+<div class="ttc" id="astructdelay__t_html_a776f35f97f4e03bed1685798da2dca92"><div class="ttname"><a href="structdelay__t.html#a776f35f97f4e03bed1685798da2dca92">delay_t::startTime</a></div><div class="ttdeci">uint32_t startTime</div><div class="ttdef"><b>Definition</b> DELAY.h:23</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BMP280_Display_Station: Archivo de código fuente C:/Users/Noxie/Desktop/PdM-practicas/Trabajo_Final/BMP280_Display_Station/Core/API/HD44780/Inc/HD44780_port.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">BMP280_Display_Station<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Trabajo práctico final - PCSE - PdM - CESE</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e2b2265a4c9bde5c5d6085b1fcc82cb8.html">BMP280_Display_Station</a></li><li class="navelem"><a class="el" href="dir_446b09c6b56895b377ee9d9e29f9c883.html">Core</a></li><li class="navelem"><a class="el" href="dir_8835e12ddf74463c939342ccbda43e39.html">API</a></li><li class="navelem"><a class="el" href="dir_93ee93e47e3ad994d0821d60a0becbc3.html">HD44780</a></li><li class="navelem"><a class="el" href="dir_b762ddaaf476412e6342ce0e886818b7.html">Inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">HD44780_port.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_h_d44780__port_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef HD44780_INC_HD44780_PORT_H_</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define HD44780_INC_HD44780_PORT_H_</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;stm32f4xx_hal.h&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="_h_d44780__port_8h.html#ac72da9845e02d812f88c208986ac5f4e">   21</a></span><span class="preprocessor">#define DEV_ADDRESS 0x27</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="};">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="_h_d44780__port_8h.html#ab194b4b2fa261462b2a38b239498cc68">   26</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>{</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="_h_d44780__port_8h.html#ab194b4b2fa261462b2a38b239498cc68afea83b9253355c78ae1b29b3812d6170">   28</a></span>    <a class="code hl_enumvalue" href="_h_d44780__port_8h.html#ab194b4b2fa261462b2a38b239498cc68afea83b9253355c78ae1b29b3812d6170">HD44780_PORT_OK</a> = 0,      </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="_h_d44780__port_8h.html#ab194b4b2fa261462b2a38b239498cc68ae72051b65e42ab48969f4760b3c88b5f">   29</a></span>    <a class="code hl_enumvalue" href="_h_d44780__port_8h.html#ab194b4b2fa261462b2a38b239498cc68ae72051b65e42ab48969f4760b3c88b5f">HD44780_PORT_ERROR</a>,       </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>} <a class="code hl_enumeration" href="_h_d44780__port_8h.html#ab194b4b2fa261462b2a38b239498cc68">hd44780_port_status_t</a>;</div>
+</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><a class="code hl_enumeration" href="_h_d44780__port_8h.html#ab194b4b2fa261462b2a38b239498cc68">hd44780_port_status_t</a> <a class="code hl_function" href="_h_d44780__port_8h.html#a93b6001f93049c307c30230fdc8c109f">HD44780_Port_Init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="keywordtype">void</span> <a class="code hl_function" href="_h_d44780__port_8h.html#a7aef9a88f9e1e4213fabaf9e2e2b6c69">HD44780_Port_Delay</a>(uint32_t delay);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><a class="code hl_enumeration" href="_h_d44780__port_8h.html#ab194b4b2fa261462b2a38b239498cc68">hd44780_port_status_t</a> <a class="code hl_function" href="_h_d44780__port_8h.html#aa2806bea81228f2954e72bfc274bda19">HD44780_Port_Send_Nibble</a>(uint8_t nibbleWrite, <span class="keywordtype">bool</span> rs);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span></div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><a class="code hl_enumeration" href="_h_d44780__port_8h.html#ab194b4b2fa261462b2a38b239498cc68">hd44780_port_status_t</a> <a class="code hl_function" href="_h_d44780__port_8h.html#a8816c8a80d789637e31cfe63052df5ce">HD44780_Port_Send_Byte</a>(uint8_t byteWrite, <span class="keywordtype">bool</span> rs);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#endif </span><span class="comment">/* HD44780_INC_HD44780_PORT_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="a_h_d44780__port_8h_html_a7aef9a88f9e1e4213fabaf9e2e2b6c69"><div class="ttname"><a href="_h_d44780__port_8h.html#a7aef9a88f9e1e4213fabaf9e2e2b6c69">HD44780_Port_Delay</a></div><div class="ttdeci">void HD44780_Port_Delay(uint32_t delay)</div><div class="ttdoc">Realiza una espera bloqueante en milisegundos.</div><div class="ttdef"><b>Definition</b> HD44780_port.c:54</div></div>
+<div class="ttc" id="a_h_d44780__port_8h_html_a8816c8a80d789637e31cfe63052df5ce"><div class="ttname"><a href="_h_d44780__port_8h.html#a8816c8a80d789637e31cfe63052df5ce">HD44780_Port_Send_Byte</a></div><div class="ttdeci">hd44780_port_status_t HD44780_Port_Send_Byte(uint8_t byteWrite, bool rs)</div><div class="ttdoc">Escribe un byte completo al LCD (en dos fases de 4 bits).</div><div class="ttdef"><b>Definition</b> HD44780_port.c:119</div></div>
+<div class="ttc" id="a_h_d44780__port_8h_html_a93b6001f93049c307c30230fdc8c109f"><div class="ttname"><a href="_h_d44780__port_8h.html#a93b6001f93049c307c30230fdc8c109f">HD44780_Port_Init</a></div><div class="ttdeci">hd44780_port_status_t HD44780_Port_Init(void)</div><div class="ttdoc">Inicializa la interfaz usada por el HD44780.</div><div class="ttdef"><b>Definition</b> HD44780_port.c:35</div></div>
+<div class="ttc" id="a_h_d44780__port_8h_html_aa2806bea81228f2954e72bfc274bda19"><div class="ttname"><a href="_h_d44780__port_8h.html#aa2806bea81228f2954e72bfc274bda19">HD44780_Port_Send_Nibble</a></div><div class="ttdeci">hd44780_port_status_t HD44780_Port_Send_Nibble(uint8_t nibbleWrite, bool rs)</div><div class="ttdoc">Envía un nibble (4 bits) al LCD HD44780.</div><div class="ttdef"><b>Definition</b> HD44780_port.c:97</div></div>
+<div class="ttc" id="a_h_d44780__port_8h_html_ab194b4b2fa261462b2a38b239498cc68"><div class="ttname"><a href="_h_d44780__port_8h.html#ab194b4b2fa261462b2a38b239498cc68">hd44780_port_status_t</a></div><div class="ttdeci">hd44780_port_status_t</div><div class="ttdoc">Códigos de estado para las operaciones del puerto PCF8574.</div><div class="ttdef"><b>Definition</b> HD44780_port.h:27</div></div>
+<div class="ttc" id="a_h_d44780__port_8h_html_ab194b4b2fa261462b2a38b239498cc68ae72051b65e42ab48969f4760b3c88b5f"><div class="ttname"><a href="_h_d44780__port_8h.html#ab194b4b2fa261462b2a38b239498cc68ae72051b65e42ab48969f4760b3c88b5f">HD44780_PORT_ERROR</a></div><div class="ttdeci">@ HD44780_PORT_ERROR</div><div class="ttdef"><b>Definition</b> HD44780_port.h:29</div></div>
+<div class="ttc" id="a_h_d44780__port_8h_html_ab194b4b2fa261462b2a38b239498cc68afea83b9253355c78ae1b29b3812d6170"><div class="ttname"><a href="_h_d44780__port_8h.html#ab194b4b2fa261462b2a38b239498cc68afea83b9253355c78ae1b29b3812d6170">HD44780_PORT_OK</a></div><div class="ttdeci">@ HD44780_PORT_OK</div><div class="ttdef"><b>Definition</b> HD44780_port.h:28</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

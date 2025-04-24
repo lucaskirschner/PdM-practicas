@@ -1,0 +1,506 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BMP280_Display_Station: Referencia del archivo C:/Users/Noxie/Desktop/PdM-practicas/Trabajo_Final/BMP280_Display_Station/Core/API/BMP280/Inc/BMP280.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">BMP280_Display_Station<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Trabajo práctico final - PCSE - PdM - CESE</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e2b2265a4c9bde5c5d6085b1fcc82cb8.html">BMP280_Display_Station</a></li><li class="navelem"><a class="el" href="dir_446b09c6b56895b377ee9d9e29f9c883.html">Core</a></li><li class="navelem"><a class="el" href="dir_8835e12ddf74463c939342ccbda43e39.html">API</a></li><li class="navelem"><a class="el" href="dir_6cc249425bd7640a1787c10d39c7c600.html">BMP280</a></li><li class="navelem"><a class="el" href="dir_8ebd4ecec31ba153318546d05cae1e95.html">Inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Estructuras de datos</a> &#124;
+<a href="#define-members">defines</a> &#124;
+<a href="#enum-members">Enumeraciones</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo BMP280.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Driver de alto nivel para el sensor BMP280 (temperatura y presión).  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_b_m_p280__port_8h_source.html">BMP280_port.h</a>&quot;</code><br />
+</div>
+<p><a href="_b_m_p280_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Estructuras de datos</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbmp280__t.html">bmp280_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estructura de configuración y datos del sensor BMP280.  <a href="structbmp280__t.html#details">Más...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a7f1bc76c7fca8103ea9763d076870415" id="r_a7f1bc76c7fca8103ea9763d076870415"><td class="memItemLeft" align="right" valign="top"><a id="a7f1bc76c7fca8103ea9763d076870415" name="a7f1bc76c7fca8103ea9763d076870415"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REG_TEMP_XLSB</b>&#160;&#160;&#160;((uint8_t) 0xFC)</td></tr>
+<tr class="separator:a7f1bc76c7fca8103ea9763d076870415"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59ff6b4cd6ad5be2486b5167eb322f29" id="r_a59ff6b4cd6ad5be2486b5167eb322f29"><td class="memItemLeft" align="right" valign="top"><a id="a59ff6b4cd6ad5be2486b5167eb322f29" name="a59ff6b4cd6ad5be2486b5167eb322f29"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REG_TEMP_LSB</b>&#160;&#160;&#160;((uint8_t) 0xFB)</td></tr>
+<tr class="separator:a59ff6b4cd6ad5be2486b5167eb322f29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6e0bd7cc50f7e612c4a5ac12c52efb1" id="r_ae6e0bd7cc50f7e612c4a5ac12c52efb1"><td class="memItemLeft" align="right" valign="top"><a id="ae6e0bd7cc50f7e612c4a5ac12c52efb1" name="ae6e0bd7cc50f7e612c4a5ac12c52efb1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REG_TEMP_MSB</b>&#160;&#160;&#160;((uint8_t) 0xFA)</td></tr>
+<tr class="separator:ae6e0bd7cc50f7e612c4a5ac12c52efb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad543b09a20881c9522cdd1767df0793a" id="r_ad543b09a20881c9522cdd1767df0793a"><td class="memItemLeft" align="right" valign="top"><a id="ad543b09a20881c9522cdd1767df0793a" name="ad543b09a20881c9522cdd1767df0793a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REG_PRESS_XLSB</b>&#160;&#160;&#160;((uint8_t) 0xF9)</td></tr>
+<tr class="separator:ad543b09a20881c9522cdd1767df0793a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa29d08314b3e6aafe96c761242810c0" id="r_aaa29d08314b3e6aafe96c761242810c0"><td class="memItemLeft" align="right" valign="top"><a id="aaa29d08314b3e6aafe96c761242810c0" name="aaa29d08314b3e6aafe96c761242810c0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REG_PRESS_LSB</b>&#160;&#160;&#160;((uint8_t) 0xF8)</td></tr>
+<tr class="separator:aaa29d08314b3e6aafe96c761242810c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadb97fd2433c88e6772f45c64df19dea" id="r_aadb97fd2433c88e6772f45c64df19dea"><td class="memItemLeft" align="right" valign="top"><a id="aadb97fd2433c88e6772f45c64df19dea" name="aadb97fd2433c88e6772f45c64df19dea"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REG_PRESS_MSB</b>&#160;&#160;&#160;((uint8_t) 0xF7)</td></tr>
+<tr class="separator:aadb97fd2433c88e6772f45c64df19dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a679325263fb326462f7410d3292171be" id="r_a679325263fb326462f7410d3292171be"><td class="memItemLeft" align="right" valign="top"><a id="a679325263fb326462f7410d3292171be" name="a679325263fb326462f7410d3292171be"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REG_CONFIG</b>&#160;&#160;&#160;((uint8_t) 0xF5)</td></tr>
+<tr class="separator:a679325263fb326462f7410d3292171be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b290e09b5d35e8b91b6870fa9f678b3" id="r_a7b290e09b5d35e8b91b6870fa9f678b3"><td class="memItemLeft" align="right" valign="top"><a id="a7b290e09b5d35e8b91b6870fa9f678b3" name="a7b290e09b5d35e8b91b6870fa9f678b3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REG_CTRL_MEAS</b>&#160;&#160;&#160;((uint8_t) 0xF4)</td></tr>
+<tr class="separator:a7b290e09b5d35e8b91b6870fa9f678b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2306dddc82e5e58f23bd44c1086a5b6f" id="r_a2306dddc82e5e58f23bd44c1086a5b6f"><td class="memItemLeft" align="right" valign="top"><a id="a2306dddc82e5e58f23bd44c1086a5b6f" name="a2306dddc82e5e58f23bd44c1086a5b6f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REG_STATUS</b>&#160;&#160;&#160;((uint8_t) 0xF3)</td></tr>
+<tr class="separator:a2306dddc82e5e58f23bd44c1086a5b6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6a95c96a883b809b1bf9c16446d0735" id="r_ad6a95c96a883b809b1bf9c16446d0735"><td class="memItemLeft" align="right" valign="top"><a id="ad6a95c96a883b809b1bf9c16446d0735" name="ad6a95c96a883b809b1bf9c16446d0735"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REG_RESET</b>&#160;&#160;&#160;((uint8_t) 0xE0)</td></tr>
+<tr class="separator:ad6a95c96a883b809b1bf9c16446d0735"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91339a8293cb53b81407c016bc41e2b1" id="r_a91339a8293cb53b81407c016bc41e2b1"><td class="memItemLeft" align="right" valign="top"><a id="a91339a8293cb53b81407c016bc41e2b1" name="a91339a8293cb53b81407c016bc41e2b1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REG_ID</b>&#160;&#160;&#160;((uint8_t) 0xD0)</td></tr>
+<tr class="separator:a91339a8293cb53b81407c016bc41e2b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f350203fb8d12a680dc18f44d147715" id="r_a1f350203fb8d12a680dc18f44d147715"><td class="memItemLeft" align="right" valign="top"><a id="a1f350203fb8d12a680dc18f44d147715" name="a1f350203fb8d12a680dc18f44d147715"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>REG_CALIB_START</b>&#160;&#160;&#160;((uint8_t) 0x88)</td></tr>
+<tr class="separator:a1f350203fb8d12a680dc18f44d147715"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91bc5d10d659aeedc49c81fdd03b7cf6" id="r_a91bc5d10d659aeedc49c81fdd03b7cf6"><td class="memItemLeft" align="right" valign="top"><a id="a91bc5d10d659aeedc49c81fdd03b7cf6" name="a91bc5d10d659aeedc49c81fdd03b7cf6"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CONFIG_T_SB</b>&#160;&#160;&#160;((uint8_t) 0xE0)</td></tr>
+<tr class="separator:a91bc5d10d659aeedc49c81fdd03b7cf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80d50db3e3cbe69271db1f411a5f141f" id="r_a80d50db3e3cbe69271db1f411a5f141f"><td class="memItemLeft" align="right" valign="top"><a id="a80d50db3e3cbe69271db1f411a5f141f" name="a80d50db3e3cbe69271db1f411a5f141f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CONFIG_FILTER</b>&#160;&#160;&#160;((uint8_t) 0x1C)</td></tr>
+<tr class="separator:a80d50db3e3cbe69271db1f411a5f141f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac06cfe989e9722675c3348456d124c68" id="r_ac06cfe989e9722675c3348456d124c68"><td class="memItemLeft" align="right" valign="top"><a id="ac06cfe989e9722675c3348456d124c68" name="ac06cfe989e9722675c3348456d124c68"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CONFIG_SPI3W_EN</b>&#160;&#160;&#160;((uint8_t) 0x01)</td></tr>
+<tr class="separator:ac06cfe989e9722675c3348456d124c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a090f97c5f556aba7ec1e2e7a3300b09f" id="r_a090f97c5f556aba7ec1e2e7a3300b09f"><td class="memItemLeft" align="right" valign="top"><a id="a090f97c5f556aba7ec1e2e7a3300b09f" name="a090f97c5f556aba7ec1e2e7a3300b09f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CTRL_MEAS_OSRS_T</b>&#160;&#160;&#160;((uint8_t) 0xE0)</td></tr>
+<tr class="separator:a090f97c5f556aba7ec1e2e7a3300b09f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0eaaccdf7a57bf5a1974a914c876480" id="r_ac0eaaccdf7a57bf5a1974a914c876480"><td class="memItemLeft" align="right" valign="top"><a id="ac0eaaccdf7a57bf5a1974a914c876480" name="ac0eaaccdf7a57bf5a1974a914c876480"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CTRL_MEAS_OSRS_P</b>&#160;&#160;&#160;((uint8_t) 0x1C)</td></tr>
+<tr class="separator:ac0eaaccdf7a57bf5a1974a914c876480"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f7f20deb740eae6b2c326a5c4eaf467" id="r_a4f7f20deb740eae6b2c326a5c4eaf467"><td class="memItemLeft" align="right" valign="top"><a id="a4f7f20deb740eae6b2c326a5c4eaf467" name="a4f7f20deb740eae6b2c326a5c4eaf467"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CTRL_MEAS_MODE</b>&#160;&#160;&#160;((uint8_t) 0x03)</td></tr>
+<tr class="separator:a4f7f20deb740eae6b2c326a5c4eaf467"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f8d668c572a6b4b5a729d1d99e5cd0f" id="r_a4f8d668c572a6b4b5a729d1d99e5cd0f"><td class="memItemLeft" align="right" valign="top"><a id="a4f8d668c572a6b4b5a729d1d99e5cd0f" name="a4f8d668c572a6b4b5a729d1d99e5cd0f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>STATUS_MEASURING</b>&#160;&#160;&#160;((uint8_t) 0x08)</td></tr>
+<tr class="separator:a4f8d668c572a6b4b5a729d1d99e5cd0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6f32749651a8040f42c5fade15baf09" id="r_ab6f32749651a8040f42c5fade15baf09"><td class="memItemLeft" align="right" valign="top"><a id="ab6f32749651a8040f42c5fade15baf09" name="ab6f32749651a8040f42c5fade15baf09"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>STATUS_IM_UPDATE</b>&#160;&#160;&#160;((uint8_t) 0x01)</td></tr>
+<tr class="separator:ab6f32749651a8040f42c5fade15baf09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adad6188520545c9be56ee74a225d9940" id="r_adad6188520545c9be56ee74a225d9940"><td class="memItemLeft" align="right" valign="top"><a id="adad6188520545c9be56ee74a225d9940" name="adad6188520545c9be56ee74a225d9940"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>STANDBY_05</b>&#160;&#160;&#160;((uint8_t) 0x00)</td></tr>
+<tr class="separator:adad6188520545c9be56ee74a225d9940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a357bc21230cd08eea633f9a60b0edd7f" id="r_a357bc21230cd08eea633f9a60b0edd7f"><td class="memItemLeft" align="right" valign="top"><a id="a357bc21230cd08eea633f9a60b0edd7f" name="a357bc21230cd08eea633f9a60b0edd7f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>STANDBY_625</b>&#160;&#160;&#160;((uint8_t) 0x20)</td></tr>
+<tr class="separator:a357bc21230cd08eea633f9a60b0edd7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaaceced1a912be4178b4b77a437f4179" id="r_aaaceced1a912be4178b4b77a437f4179"><td class="memItemLeft" align="right" valign="top"><a id="aaaceced1a912be4178b4b77a437f4179" name="aaaceced1a912be4178b4b77a437f4179"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>STANDBY_125</b>&#160;&#160;&#160;((uint8_t) 0x40)</td></tr>
+<tr class="separator:aaaceced1a912be4178b4b77a437f4179"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa69fc585b416fd71ad0d89b944dab538" id="r_aa69fc585b416fd71ad0d89b944dab538"><td class="memItemLeft" align="right" valign="top"><a id="aa69fc585b416fd71ad0d89b944dab538" name="aa69fc585b416fd71ad0d89b944dab538"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>STANDBY_250</b>&#160;&#160;&#160;((uint8_t) 0x60)</td></tr>
+<tr class="separator:aa69fc585b416fd71ad0d89b944dab538"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a082da5fa43b260f80d6c387cc7f85817" id="r_a082da5fa43b260f80d6c387cc7f85817"><td class="memItemLeft" align="right" valign="top"><a id="a082da5fa43b260f80d6c387cc7f85817" name="a082da5fa43b260f80d6c387cc7f85817"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>STANDBY_500</b>&#160;&#160;&#160;((uint8_t) 0x80)</td></tr>
+<tr class="separator:a082da5fa43b260f80d6c387cc7f85817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f77478ddd379062617813024af3744c" id="r_a3f77478ddd379062617813024af3744c"><td class="memItemLeft" align="right" valign="top"><a id="a3f77478ddd379062617813024af3744c" name="a3f77478ddd379062617813024af3744c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>STANDBY_1000</b>&#160;&#160;&#160;((uint8_t) 0xA0)</td></tr>
+<tr class="separator:a3f77478ddd379062617813024af3744c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae44f95fd1d444e9d3b43fa5242adb7f3" id="r_ae44f95fd1d444e9d3b43fa5242adb7f3"><td class="memItemLeft" align="right" valign="top"><a id="ae44f95fd1d444e9d3b43fa5242adb7f3" name="ae44f95fd1d444e9d3b43fa5242adb7f3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>STANDBY_2000</b>&#160;&#160;&#160;((uint8_t) 0xC0)</td></tr>
+<tr class="separator:ae44f95fd1d444e9d3b43fa5242adb7f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaa5c3594fd5d8a9b5a7449bc25ea1cb" id="r_afaa5c3594fd5d8a9b5a7449bc25ea1cb"><td class="memItemLeft" align="right" valign="top"><a id="afaa5c3594fd5d8a9b5a7449bc25ea1cb" name="afaa5c3594fd5d8a9b5a7449bc25ea1cb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>STANDBY_4000</b>&#160;&#160;&#160;((uint8_t) 0xE0)</td></tr>
+<tr class="separator:afaa5c3594fd5d8a9b5a7449bc25ea1cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a795f4bf131196e2531a9008c576b0fa2" id="r_a795f4bf131196e2531a9008c576b0fa2"><td class="memItemLeft" align="right" valign="top"><a id="a795f4bf131196e2531a9008c576b0fa2" name="a795f4bf131196e2531a9008c576b0fa2"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FILTER_COEFF_OFF</b>&#160;&#160;&#160;((uint8_t) 0x00)</td></tr>
+<tr class="separator:a795f4bf131196e2531a9008c576b0fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac884b78bf085760424210495d25439f0" id="r_ac884b78bf085760424210495d25439f0"><td class="memItemLeft" align="right" valign="top"><a id="ac884b78bf085760424210495d25439f0" name="ac884b78bf085760424210495d25439f0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FILTER_COEFF_X2</b>&#160;&#160;&#160;((uint8_t) 0x04)</td></tr>
+<tr class="separator:ac884b78bf085760424210495d25439f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7c3908615c5eff453fb17eaedf62359" id="r_ac7c3908615c5eff453fb17eaedf62359"><td class="memItemLeft" align="right" valign="top"><a id="ac7c3908615c5eff453fb17eaedf62359" name="ac7c3908615c5eff453fb17eaedf62359"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FILTER_COEFF_X4</b>&#160;&#160;&#160;((uint8_t) 0x08)</td></tr>
+<tr class="separator:ac7c3908615c5eff453fb17eaedf62359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12c8abcdd423860a6ae976e5d40c1c8c" id="r_a12c8abcdd423860a6ae976e5d40c1c8c"><td class="memItemLeft" align="right" valign="top"><a id="a12c8abcdd423860a6ae976e5d40c1c8c" name="a12c8abcdd423860a6ae976e5d40c1c8c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FILTER_COEFF_X8</b>&#160;&#160;&#160;((uint8_t) 0x0c)</td></tr>
+<tr class="separator:a12c8abcdd423860a6ae976e5d40c1c8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d8858924dfede0d7aeaeab51260f824" id="r_a2d8858924dfede0d7aeaeab51260f824"><td class="memItemLeft" align="right" valign="top"><a id="a2d8858924dfede0d7aeaeab51260f824" name="a2d8858924dfede0d7aeaeab51260f824"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FILTER_COEFF_X16</b>&#160;&#160;&#160;((uint8_t) 0x10)</td></tr>
+<tr class="separator:a2d8858924dfede0d7aeaeab51260f824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17a8d59f48d77b8ac5d161942f3e9188" id="r_a17a8d59f48d77b8ac5d161942f3e9188"><td class="memItemLeft" align="right" valign="top"><a id="a17a8d59f48d77b8ac5d161942f3e9188" name="a17a8d59f48d77b8ac5d161942f3e9188"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TEMP_OVER_SKIP</b>&#160;&#160;&#160;((uint8_t) 0x00)</td></tr>
+<tr class="separator:a17a8d59f48d77b8ac5d161942f3e9188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a68465c4dc42e99c5e735b7ebd8ad2260" id="r_a68465c4dc42e99c5e735b7ebd8ad2260"><td class="memItemLeft" align="right" valign="top"><a id="a68465c4dc42e99c5e735b7ebd8ad2260" name="a68465c4dc42e99c5e735b7ebd8ad2260"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TEMP_OVER_x1</b>&#160;&#160;&#160;((uint8_t) 0x20)</td></tr>
+<tr class="separator:a68465c4dc42e99c5e735b7ebd8ad2260"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2961e93c9f6601044af1620e874bdd3" id="r_ad2961e93c9f6601044af1620e874bdd3"><td class="memItemLeft" align="right" valign="top"><a id="ad2961e93c9f6601044af1620e874bdd3" name="ad2961e93c9f6601044af1620e874bdd3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TEMP_OVER_x2</b>&#160;&#160;&#160;((uint8_t) 0x40)</td></tr>
+<tr class="separator:ad2961e93c9f6601044af1620e874bdd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5dc03082e77debdf8982fb8798b9ae4" id="r_ad5dc03082e77debdf8982fb8798b9ae4"><td class="memItemLeft" align="right" valign="top"><a id="ad5dc03082e77debdf8982fb8798b9ae4" name="ad5dc03082e77debdf8982fb8798b9ae4"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TEMP_OVER_x4</b>&#160;&#160;&#160;((uint8_t) 0x60)</td></tr>
+<tr class="separator:ad5dc03082e77debdf8982fb8798b9ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79b1159b0bc8014235be8011aedbedb1" id="r_a79b1159b0bc8014235be8011aedbedb1"><td class="memItemLeft" align="right" valign="top"><a id="a79b1159b0bc8014235be8011aedbedb1" name="a79b1159b0bc8014235be8011aedbedb1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TEMP_OVER_x8</b>&#160;&#160;&#160;((uint8_t) 0x80)</td></tr>
+<tr class="separator:a79b1159b0bc8014235be8011aedbedb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a816433127f77756315285aae17471f20" id="r_a816433127f77756315285aae17471f20"><td class="memItemLeft" align="right" valign="top"><a id="a816433127f77756315285aae17471f20" name="a816433127f77756315285aae17471f20"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>TEMP_OVER_x16</b>&#160;&#160;&#160;((uint8_t) 0xF0)</td></tr>
+<tr class="separator:a816433127f77756315285aae17471f20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a495822d6b441d4cf9f5c0108e9e2e39a" id="r_a495822d6b441d4cf9f5c0108e9e2e39a"><td class="memItemLeft" align="right" valign="top"><a id="a495822d6b441d4cf9f5c0108e9e2e39a" name="a495822d6b441d4cf9f5c0108e9e2e39a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PRESS_OVER_SKIP</b>&#160;&#160;&#160;((uint8_t) 0x00)</td></tr>
+<tr class="separator:a495822d6b441d4cf9f5c0108e9e2e39a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81d853973bf7840ef8e8c557fe8c5b3a" id="r_a81d853973bf7840ef8e8c557fe8c5b3a"><td class="memItemLeft" align="right" valign="top"><a id="a81d853973bf7840ef8e8c557fe8c5b3a" name="a81d853973bf7840ef8e8c557fe8c5b3a"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PRESS_OVER_x1</b>&#160;&#160;&#160;((uint8_t) 0x04)</td></tr>
+<tr class="separator:a81d853973bf7840ef8e8c557fe8c5b3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52d95ee9844d5c04eceb6c7742a28973" id="r_a52d95ee9844d5c04eceb6c7742a28973"><td class="memItemLeft" align="right" valign="top"><a id="a52d95ee9844d5c04eceb6c7742a28973" name="a52d95ee9844d5c04eceb6c7742a28973"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PRESS_OVER_x2</b>&#160;&#160;&#160;((uint8_t) 0x08)</td></tr>
+<tr class="separator:a52d95ee9844d5c04eceb6c7742a28973"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add86707b84575a33773260a34870029e" id="r_add86707b84575a33773260a34870029e"><td class="memItemLeft" align="right" valign="top"><a id="add86707b84575a33773260a34870029e" name="add86707b84575a33773260a34870029e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PRESS_OVER_x4</b>&#160;&#160;&#160;((uint8_t) 0x0C)</td></tr>
+<tr class="separator:add86707b84575a33773260a34870029e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa66302965498b9e6807905e874530766" id="r_aa66302965498b9e6807905e874530766"><td class="memItemLeft" align="right" valign="top"><a id="aa66302965498b9e6807905e874530766" name="aa66302965498b9e6807905e874530766"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PRESS_OVER_x8</b>&#160;&#160;&#160;((uint8_t) 0x10)</td></tr>
+<tr class="separator:aa66302965498b9e6807905e874530766"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a732c6f904fdb48104691b4f992d70d7f" id="r_a732c6f904fdb48104691b4f992d70d7f"><td class="memItemLeft" align="right" valign="top"><a id="a732c6f904fdb48104691b4f992d70d7f" name="a732c6f904fdb48104691b4f992d70d7f"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>PRESS_OVER_x16</b>&#160;&#160;&#160;((uint8_t) 0x14)</td></tr>
+<tr class="separator:a732c6f904fdb48104691b4f992d70d7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6097218fc13c9936e96507d6fd9fafe0" id="r_a6097218fc13c9936e96507d6fd9fafe0"><td class="memItemLeft" align="right" valign="top"><a id="a6097218fc13c9936e96507d6fd9fafe0" name="a6097218fc13c9936e96507d6fd9fafe0"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>SLEEP_MODE</b>&#160;&#160;&#160;((uint8_t) 0x00)</td></tr>
+<tr class="separator:a6097218fc13c9936e96507d6fd9fafe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49eb0b3ec737425484fbcd77adc5fb11" id="r_a49eb0b3ec737425484fbcd77adc5fb11"><td class="memItemLeft" align="right" valign="top"><a id="a49eb0b3ec737425484fbcd77adc5fb11" name="a49eb0b3ec737425484fbcd77adc5fb11"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>FORCED_MODE</b>&#160;&#160;&#160;((uint8_t) 0x01)</td></tr>
+<tr class="separator:a49eb0b3ec737425484fbcd77adc5fb11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa045b6864425ecb90f2c253e8440d21c" id="r_aa045b6864425ecb90f2c253e8440d21c"><td class="memItemLeft" align="right" valign="top"><a id="aa045b6864425ecb90f2c253e8440d21c" name="aa045b6864425ecb90f2c253e8440d21c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NORMAL_MODE</b>&#160;&#160;&#160;((uint8_t) 0x03)</td></tr>
+<tr class="separator:aa045b6864425ecb90f2c253e8440d21c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8fe54f90634a968e3d728abf1ac87a1" id="r_af8fe54f90634a968e3d728abf1ac87a1"><td class="memItemLeft" align="right" valign="top"><a id="af8fe54f90634a968e3d728abf1ac87a1" name="af8fe54f90634a968e3d728abf1ac87a1"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>READ_MASK</b>&#160;&#160;&#160;((uint8_t) 0x80)</td></tr>
+<tr class="separator:af8fe54f90634a968e3d728abf1ac87a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63ac36b9e7738f8045152703b0d12610" id="r_a63ac36b9e7738f8045152703b0d12610"><td class="memItemLeft" align="right" valign="top"><a id="a63ac36b9e7738f8045152703b0d12610" name="a63ac36b9e7738f8045152703b0d12610"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>WRITE_MASK</b>&#160;&#160;&#160;((uint8_t) 0x7F)</td></tr>
+<tr class="separator:a63ac36b9e7738f8045152703b0d12610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0aa3e54cd2934b67b9882957456c391" id="r_ab0aa3e54cd2934b67b9882957456c391"><td class="memItemLeft" align="right" valign="top"><a id="ab0aa3e54cd2934b67b9882957456c391" name="ab0aa3e54cd2934b67b9882957456c391"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHIP_ID</b>&#160;&#160;&#160;((uint8_t) 0x58)</td></tr>
+<tr class="separator:ab0aa3e54cd2934b67b9882957456c391"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a665cd88ac4e3d161d14d56684a30961c" id="r_a665cd88ac4e3d161d14d56684a30961c"><td class="memItemLeft" align="right" valign="top"><a id="a665cd88ac4e3d161d14d56684a30961c" name="a665cd88ac4e3d161d14d56684a30961c"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>CHIP_RESET</b>&#160;&#160;&#160;((uint8_t) 0xB6)</td></tr>
+<tr class="separator:a665cd88ac4e3d161d14d56684a30961c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4adee20a779db208219187b07557b0f9" id="r_a4adee20a779db208219187b07557b0f9"><td class="memItemLeft" align="right" valign="top"><a id="a4adee20a779db208219187b07557b0f9" name="a4adee20a779db208219187b07557b0f9"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DUMMY_PKG</b>&#160;&#160;&#160;((uint8_t) 0x00)</td></tr>
+<tr class="separator:a4adee20a779db208219187b07557b0f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:a6e1ca14b0a3292d9f3955fe82d8ceef4" id="r_a6e1ca14b0a3292d9f3955fe82d8ceef4"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a> { <br />
+&#160;&#160;<a class="el" href="#a6e1ca14b0a3292d9f3955fe82d8ceef4a5aab246e404a855c31d37b6d268f24d6">BMP280_OK</a> = 0
+, <a class="el" href="#a6e1ca14b0a3292d9f3955fe82d8ceef4a982cb2f3bf6191d8fb094da2ff326c68">BMP280_DATA_RDY</a>
+, <a class="el" href="#a6e1ca14b0a3292d9f3955fe82d8ceef4a29250104589e8cd3fbf99ee9e8e25bdc">BMP280_DATA_NOT_RDY</a>
+, <a class="el" href="#a6e1ca14b0a3292d9f3955fe82d8ceef4a86046229dd0e66a664af303a617459f9">BMP280_ERROR_PARAM</a>
+, <br />
+&#160;&#160;<a class="el" href="#a6e1ca14b0a3292d9f3955fe82d8ceef4a7d8ccf14df43e4751c927e01bd954521">BMP280_ERROR_COMM</a>
+, <a class="el" href="#a6e1ca14b0a3292d9f3955fe82d8ceef4a885f787b0374585aa66a44480c42a1aa">BMP280_ERROR_INVALID_ID</a>
+, <a class="el" href="#a6e1ca14b0a3292d9f3955fe82d8ceef4a7020937ca20ac583b8b75064cf0b5713">BMP280_ERROR_INVALID_MODE</a>
+, <a class="el" href="#a6e1ca14b0a3292d9f3955fe82d8ceef4adb792b3de9483257b1cd6e754fc8fc36">BMP280_ERROR_NAN</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a6e1ca14b0a3292d9f3955fe82d8ceef4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estados posibles que pueden devolver las funciones del driver.  <a href="#a6e1ca14b0a3292d9f3955fe82d8ceef4">Más...</a><br /></td></tr>
+<tr class="separator:a6e1ca14b0a3292d9f3955fe82d8ceef4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:ac13b8493cf5593d1ba508df61594fbc6" id="r_ac13b8493cf5593d1ba508df61594fbc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac13b8493cf5593d1ba508df61594fbc6">BMP280_Init</a> (void)</td></tr>
+<tr class="memdesc:ac13b8493cf5593d1ba508df61594fbc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa el sensor BMP280.  <br /></td></tr>
+<tr class="separator:ac13b8493cf5593d1ba508df61594fbc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4920d1ce107cf5a4b9ee660c8018a977" id="r_a4920d1ce107cf5a4b9ee660c8018a977"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4920d1ce107cf5a4b9ee660c8018a977">BMP280_Trigger_Measurement</a> (void)</td></tr>
+<tr class="memdesc:a4920d1ce107cf5a4b9ee660c8018a977"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dispara una medición en modo "forced".  <br /></td></tr>
+<tr class="separator:a4920d1ce107cf5a4b9ee660c8018a977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a703f334cc6707a47c92281e56f931efe" id="r_a703f334cc6707a47c92281e56f931efe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a703f334cc6707a47c92281e56f931efe">BMP280_Is_Measuring</a> (void)</td></tr>
+<tr class="memdesc:a703f334cc6707a47c92281e56f931efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica si el sensor sigue midiendo.  <br /></td></tr>
+<tr class="separator:a703f334cc6707a47c92281e56f931efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a110143363c60ab804fe486496d8bbd18" id="r_a110143363c60ab804fe486496d8bbd18"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a110143363c60ab804fe486496d8bbd18">BMP280_Update_Parameters</a> (<a class="el" href="structbmp280__t.html">bmp280_t</a> *dev)</td></tr>
+<tr class="memdesc:a110143363c60ab804fe486496d8bbd18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lee y compensa los datos de presión y temperatura.  <br /></td></tr>
+<tr class="separator:a110143363c60ab804fe486496d8bbd18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Driver de alto nivel para el sensor BMP280 (temperatura y presión). </p>
+<dl class="section author"><dt>Autor</dt><dd>Ing. Lucas Kirschner </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>2 Apr 2025 </dd></dl>
+<p>Este archivo contiene las definiciones públicas necesarias para interactuar con el sensor BMP280. Provee funciones para inicializar el sensor, configurar su funcionamiento y leer datos compensados de temperatura y presión. </p>
+</div><h2 class="groupheader">Documentación de enumeraciones</h2>
+<a id="a6e1ca14b0a3292d9f3955fe82d8ceef4" name="a6e1ca14b0a3292d9f3955fe82d8ceef4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e1ca14b0a3292d9f3955fe82d8ceef4">&#9670;&#160;</a></span>bmp280_status_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Estados posibles que pueden devolver las funciones del driver. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="a6e1ca14b0a3292d9f3955fe82d8ceef4a5aab246e404a855c31d37b6d268f24d6" name="a6e1ca14b0a3292d9f3955fe82d8ceef4a5aab246e404a855c31d37b6d268f24d6"></a>BMP280_OK&#160;</td><td class="fielddoc"><p>Operación exitosa </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6e1ca14b0a3292d9f3955fe82d8ceef4a982cb2f3bf6191d8fb094da2ff326c68" name="a6e1ca14b0a3292d9f3955fe82d8ceef4a982cb2f3bf6191d8fb094da2ff326c68"></a>BMP280_DATA_RDY&#160;</td><td class="fielddoc"><p>Nuevos datos disponibles </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6e1ca14b0a3292d9f3955fe82d8ceef4a29250104589e8cd3fbf99ee9e8e25bdc" name="a6e1ca14b0a3292d9f3955fe82d8ceef4a29250104589e8cd3fbf99ee9e8e25bdc"></a>BMP280_DATA_NOT_RDY&#160;</td><td class="fielddoc"><p>Datos aún no listos </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6e1ca14b0a3292d9f3955fe82d8ceef4a86046229dd0e66a664af303a617459f9" name="a6e1ca14b0a3292d9f3955fe82d8ceef4a86046229dd0e66a664af303a617459f9"></a>BMP280_ERROR_PARAM&#160;</td><td class="fielddoc"><p>Error en el parámetro pasado como argumento </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6e1ca14b0a3292d9f3955fe82d8ceef4a7d8ccf14df43e4751c927e01bd954521" name="a6e1ca14b0a3292d9f3955fe82d8ceef4a7d8ccf14df43e4751c927e01bd954521"></a>BMP280_ERROR_COMM&#160;</td><td class="fielddoc"><p>Error de comunicación con el sensor </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6e1ca14b0a3292d9f3955fe82d8ceef4a885f787b0374585aa66a44480c42a1aa" name="a6e1ca14b0a3292d9f3955fe82d8ceef4a885f787b0374585aa66a44480c42a1aa"></a>BMP280_ERROR_INVALID_ID&#160;</td><td class="fielddoc"><p>ID del sensor no coincide con BMP280 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6e1ca14b0a3292d9f3955fe82d8ceef4a7020937ca20ac583b8b75064cf0b5713" name="a6e1ca14b0a3292d9f3955fe82d8ceef4a7020937ca20ac583b8b75064cf0b5713"></a>BMP280_ERROR_INVALID_MODE&#160;</td><td class="fielddoc"><p>Modo no válido </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a6e1ca14b0a3292d9f3955fe82d8ceef4adb792b3de9483257b1cd6e754fc8fc36" name="a6e1ca14b0a3292d9f3955fe82d8ceef4adb792b3de9483257b1cd6e754fc8fc36"></a>BMP280_ERROR_NAN&#160;</td><td class="fielddoc"><p>Resultado no numérico </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="ac13b8493cf5593d1ba508df61594fbc6" name="ac13b8493cf5593d1ba508df61594fbc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac13b8493cf5593d1ba508df61594fbc6">&#9670;&#160;</a></span>BMP280_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a> BMP280_Init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa el sensor BMP280. </p>
+<p>Esta función verifica la conexión con el sensor, lee su ID y aplica la configuración almacenada en la estructura <code><a class="el" href="structbmp280__t.html" title="Estructura de configuración y datos del sensor BMP280.">bmp280_t</a></code>.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>Puntero a la estructura de configuración del sensor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Estado de la operación (BMP280_OK si fue exitosa).</dd></dl>
+<p>Se realiza un envío de paquete dummy para estabilizar la línea SCK (recomendado para SPI), luego se lee el ID del sensor y se configuran los registros <code>config</code> y <code>ctrl_meas</code>. Finalmente, se cargan los coeficientes de calibración. Es importante que la función sea llamada una vez tras energizar el sensor.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>Puntero a la estructura del dispositivo a inicializar. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>BMP280_OK si se inicializó correctamente, o un código de error. </dd></dl>
+
+</div>
+</div>
+<a id="a703f334cc6707a47c92281e56f931efe" name="a703f334cc6707a47c92281e56f931efe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a703f334cc6707a47c92281e56f931efe">&#9670;&#160;</a></span>BMP280_Is_Measuring()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a> BMP280_Is_Measuring </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica si el sensor sigue midiendo. </p>
+<p>Útil para saber si ya se puede leer el resultado luego de usar <code><a class="el" href="#a4920d1ce107cf5a4b9ee660c8018a977" title="Dispara una medición en modo &quot;forced&quot;.">BMP280_Trigger_Measurement()</a></code>.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>Puntero a la estructura del sensor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>BMP280_DATA_RDY si los datos están listos, BMP280_DATA_NOT_RDY si no.</dd></dl>
+<p>Verifica si el sensor sigue midiendo.</p>
+<p>Esta función consulta el bit de estado <code>measuring</code> del registro STATUS (0xF3).</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>Puntero al dispositivo BMP280. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>BMP280_DATA_RDY si los datos están listos, BMP280_DATA_NOT_RDY si aún mide, o un código de error si la lectura falla. </dd></dl>
+
+</div>
+</div>
+<a id="a4920d1ce107cf5a4b9ee660c8018a977" name="a4920d1ce107cf5a4b9ee660c8018a977"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4920d1ce107cf5a4b9ee660c8018a977">&#9670;&#160;</a></span>BMP280_Trigger_Measurement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a> BMP280_Trigger_Measurement </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Dispara una medición en modo "forced". </p>
+<p>Esta función inicia una nueva medición si el sensor está en modo forzado.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>Puntero a la estructura del sensor. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Estado de la operación.</dd></dl>
+<p>Dispara una medición en modo "forced".</p>
+<p>En este modo, el sensor permanece dormido y solo se activa cuando se escribe en <code>ctrl_meas</code>. Una vez finalizada la medición, vuelve automáticamente a SLEEP.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>Puntero a la estructura del dispositivo. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>BMP280_OK si el disparo fue exitoso, o un error si el modo no es FORCED. </dd></dl>
+
+</div>
+</div>
+<a id="a110143363c60ab804fe486496d8bbd18" name="a110143363c60ab804fe486496d8bbd18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a110143363c60ab804fe486496d8bbd18">&#9670;&#160;</a></span>BMP280_Update_Parameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a> BMP280_Update_Parameters </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structbmp280__t.html">bmp280_t</a> *</td>          <td class="paramname"><span class="paramname"><em>dev</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lee y compensa los datos de presión y temperatura. </p>
+<p>Esta función realiza una lectura de los registros crudos y aplica la compensación utilizando los coeficientes internos del sensor.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>Puntero a la estructura del sensor. Al finalizar, contiene los nuevos datos. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Estado de la operación.</dd></dl>
+<p>Lee y compensa los datos de presión y temperatura.</p>
+<p>Aplica las fórmulas de compensación flotante detalladas en la hoja de datos, que utilizan los coeficientes internos previamente cargados. La lectura se basa en los registros de datos crudos, y el orden de las operaciones busca preservar la precisión final.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dev</td><td>Puntero al descriptor del BMP280. La estructura se actualiza con los valores. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>BMP280_OK si se actualizaron correctamente, o un error correspondiente. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

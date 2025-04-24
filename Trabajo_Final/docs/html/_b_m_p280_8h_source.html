@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BMP280_Display_Station: Archivo de código fuente C:/Users/Noxie/Desktop/PdM-practicas/Trabajo_Final/BMP280_Display_Station/Core/API/BMP280/Inc/BMP280.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">BMP280_Display_Station<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Trabajo práctico final - PCSE - PdM - CESE</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e2b2265a4c9bde5c5d6085b1fcc82cb8.html">BMP280_Display_Station</a></li><li class="navelem"><a class="el" href="dir_446b09c6b56895b377ee9d9e29f9c883.html">Core</a></li><li class="navelem"><a class="el" href="dir_8835e12ddf74463c939342ccbda43e39.html">API</a></li><li class="navelem"><a class="el" href="dir_6cc249425bd7640a1787c10d39c7c600.html">BMP280</a></li><li class="navelem"><a class="el" href="dir_8ebd4ecec31ba153318546d05cae1e95.html">Inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">BMP280.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_b_m_p280_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef BMP280_INC_BMP280_H_</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define BMP280_INC_BMP280_H_</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="_b_m_p280__port_8h.html">BMP280_port.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="comment">/* BM280 Memory map --------------------------------------------*/</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#define REG_TEMP_XLSB           ((uint8_t) 0xFC)</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#define REG_TEMP_LSB            ((uint8_t) 0xFB)</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#define REG_TEMP_MSB            ((uint8_t) 0xFA)</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#define REG_PRESS_XLSB          ((uint8_t) 0xF9)</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define REG_PRESS_LSB           ((uint8_t) 0xF8)</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define REG_PRESS_MSB           ((uint8_t) 0xF7)</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#define REG_CONFIG              ((uint8_t) 0xF5)</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#define REG_CTRL_MEAS           ((uint8_t) 0xF4)</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#define REG_STATUS              ((uint8_t) 0xF3)</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#define REG_RESET               ((uint8_t) 0xE0)</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define REG_ID                  ((uint8_t) 0xD0)</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#define REG_CALIB_START         ((uint8_t) 0x88)</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="comment">/* BM280 Config register ---------------------------------------*/</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">#define CONFIG_T_SB             ((uint8_t) 0xE0)</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#define CONFIG_FILTER           ((uint8_t) 0x1C)</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">#define CONFIG_SPI3W_EN         ((uint8_t) 0x01)</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="comment">/* BM280 Control meas register ---------------------------------*/</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#define CTRL_MEAS_OSRS_T        ((uint8_t) 0xE0)</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">#define CTRL_MEAS_OSRS_P        ((uint8_t) 0x1C)</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#define CTRL_MEAS_MODE          ((uint8_t) 0x03)</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="comment">/* BM280 Status register ---------------------------------------*/</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span><span class="preprocessor">#define STATUS_MEASURING        ((uint8_t) 0x08)</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span><span class="preprocessor">#define STATUS_IM_UPDATE        ((uint8_t) 0x01)</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="comment">/* BM280 Standby times -----------------------------------------*/</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span><span class="preprocessor">#define STANDBY_05              ((uint8_t) 0x00)</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">#define STANDBY_625             ((uint8_t) 0x20)</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span><span class="preprocessor">#define STANDBY_125             ((uint8_t) 0x40)</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">#define STANDBY_250             ((uint8_t) 0x60)</span></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span><span class="preprocessor">#define STANDBY_500             ((uint8_t) 0x80)</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="preprocessor">#define STANDBY_1000            ((uint8_t) 0xA0)</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">#define STANDBY_2000            ((uint8_t) 0xC0)</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#define STANDBY_4000            ((uint8_t) 0xE0)</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span><span class="comment">/* BM280 Filter coefficient ------------------------------------*/</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="preprocessor">#define FILTER_COEFF_OFF        ((uint8_t) 0x00)</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="preprocessor">#define FILTER_COEFF_X2         ((uint8_t) 0x04)</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#define FILTER_COEFF_X4         ((uint8_t) 0x08)</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="preprocessor">#define FILTER_COEFF_X8         ((uint8_t) 0x0c)</span></div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span><span class="preprocessor">#define FILTER_COEFF_X16        ((uint8_t) 0x10)</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span><span class="comment">/* BM280 Temperature oversampling settings ---------------------*/</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span><span class="preprocessor">#define TEMP_OVER_SKIP          ((uint8_t) 0x00)</span></div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="preprocessor">#define TEMP_OVER_x1            ((uint8_t) 0x20)</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#define TEMP_OVER_x2            ((uint8_t) 0x40)</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="preprocessor">#define TEMP_OVER_x4            ((uint8_t) 0x60)</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#define TEMP_OVER_x8            ((uint8_t) 0x80)</span></div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span><span class="preprocessor">#define TEMP_OVER_x16           ((uint8_t) 0xF0)</span></div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="comment">/* BM280 Pressure oversampling settings ------------------------*/</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="preprocessor">#define PRESS_OVER_SKIP         ((uint8_t) 0x00)</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span><span class="preprocessor">#define PRESS_OVER_x1           ((uint8_t) 0x04)</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span><span class="preprocessor">#define PRESS_OVER_x2           ((uint8_t) 0x08)</span></div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#define PRESS_OVER_x4           ((uint8_t) 0x0C)</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span><span class="preprocessor">#define PRESS_OVER_x8           ((uint8_t) 0x10)</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="preprocessor">#define PRESS_OVER_x16          ((uint8_t) 0x14)</span></div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="comment">/* BM280 Modes -------------------------------------------------*/</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="preprocessor">#define SLEEP_MODE              ((uint8_t) 0x00)</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><span class="preprocessor">#define FORCED_MODE             ((uint8_t) 0x01)</span></div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#define NORMAL_MODE             ((uint8_t) 0x03)</span></div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">/* BM280 SPI Read adn Write masks ------------------------------*/</span></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">#define READ_MASK               ((uint8_t) 0x80)</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#define WRITE_MASK              ((uint8_t) 0x7F)</span></div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="comment">/* BM280 packages ----------------------------------------------*/</span></div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#define CHIP_ID                 ((uint8_t) 0x58)</span></div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">#define CHIP_RESET              ((uint8_t) 0xB6)</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">#define DUMMY_PKG               ((uint8_t) 0x00)</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span></div>
+<div class="foldopen" id="foldopen00098" data-start="{" data-end="};">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4">   98</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>{</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno"><a class="line" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4a5aab246e404a855c31d37b6d268f24d6">  100</a></span>    <a class="code hl_enumvalue" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4a5aab246e404a855c31d37b6d268f24d6">BMP280_OK</a> = 0,                 </div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4a982cb2f3bf6191d8fb094da2ff326c68">  101</a></span>    <a class="code hl_enumvalue" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4a982cb2f3bf6191d8fb094da2ff326c68">BMP280_DATA_RDY</a>,               </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno"><a class="line" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4a29250104589e8cd3fbf99ee9e8e25bdc">  102</a></span>    <a class="code hl_enumvalue" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4a29250104589e8cd3fbf99ee9e8e25bdc">BMP280_DATA_NOT_RDY</a>,           </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno"><a class="line" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4a86046229dd0e66a664af303a617459f9">  103</a></span>    <a class="code hl_enumvalue" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4a86046229dd0e66a664af303a617459f9">BMP280_ERROR_PARAM</a>,            </div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4a7d8ccf14df43e4751c927e01bd954521">  104</a></span>    <a class="code hl_enumvalue" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4a7d8ccf14df43e4751c927e01bd954521">BMP280_ERROR_COMM</a>,             </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4a885f787b0374585aa66a44480c42a1aa">  105</a></span>    <a class="code hl_enumvalue" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4a885f787b0374585aa66a44480c42a1aa">BMP280_ERROR_INVALID_ID</a>,       </div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno"><a class="line" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4a7020937ca20ac583b8b75064cf0b5713">  106</a></span>    <a class="code hl_enumvalue" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4a7020937ca20ac583b8b75064cf0b5713">BMP280_ERROR_INVALID_MODE</a>,     </div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4adb792b3de9483257b1cd6e754fc8fc36">  107</a></span>    <a class="code hl_enumvalue" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4adb792b3de9483257b1cd6e754fc8fc36">BMP280_ERROR_NAN</a>               </div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>} <a class="code hl_enumeration" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a>;</div>
+</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span></div>
+<div class="foldopen" id="foldopen00113" data-start="{" data-end="};">
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno"><a class="line" href="structbmp280__t.html">  113</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span></div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>{</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="comment">/* Últimas lecturas compensadas */</span></div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno"><a class="line" href="structbmp280__t.html#afc1d28cfbce795d6ea954ebe725241f5">  116</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structbmp280__t.html#afc1d28cfbce795d6ea954ebe725241f5">temperature</a>;             </div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="structbmp280__t.html#ac870e1249bab4a2a68cc4126761d24ef">  117</a></span>    <span class="keywordtype">float</span> <a class="code hl_variable" href="structbmp280__t.html#ac870e1249bab4a2a68cc4126761d24ef">pressure</a>;                </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>} <a class="code hl_struct" href="structbmp280__t.html">bmp280_t</a>;</div>
+</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span></div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><a class="code hl_enumeration" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a> <a class="code hl_function" href="_b_m_p280_8h.html#ac13b8493cf5593d1ba508df61594fbc6">BMP280_Init</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span></div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span><a class="code hl_enumeration" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a>  <a class="code hl_function" href="_b_m_p280_8h.html#a4920d1ce107cf5a4b9ee660c8018a977">BMP280_Trigger_Measurement</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span></div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span><a class="code hl_enumeration" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a> <a class="code hl_function" href="_b_m_p280_8h.html#a703f334cc6707a47c92281e56f931efe">BMP280_Is_Measuring</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span></div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span><a class="code hl_enumeration" href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a> <a class="code hl_function" href="_b_m_p280_8h.html#a110143363c60ab804fe486496d8bbd18">BMP280_Update_Parameters</a>(<a class="code hl_struct" href="structbmp280__t.html">bmp280_t</a>* dev);</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span><span class="preprocessor">#endif </span><span class="comment">/* BMP280_INC_BMP280_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="a_b_m_p280_8h_html_a110143363c60ab804fe486496d8bbd18"><div class="ttname"><a href="_b_m_p280_8h.html#a110143363c60ab804fe486496d8bbd18">BMP280_Update_Parameters</a></div><div class="ttdeci">bmp280_status_t BMP280_Update_Parameters(bmp280_t *dev)</div><div class="ttdoc">Lee y compensa los datos de presión y temperatura.</div><div class="ttdef"><b>Definition</b> BMP280.c:280</div></div>
+<div class="ttc" id="a_b_m_p280_8h_html_a4920d1ce107cf5a4b9ee660c8018a977"><div class="ttname"><a href="_b_m_p280_8h.html#a4920d1ce107cf5a4b9ee660c8018a977">BMP280_Trigger_Measurement</a></div><div class="ttdeci">bmp280_status_t BMP280_Trigger_Measurement(void)</div><div class="ttdoc">Dispara una medición en modo &quot;forced&quot;.</div><div class="ttdef"><b>Definition</b> BMP280.c:231</div></div>
+<div class="ttc" id="a_b_m_p280_8h_html_a6e1ca14b0a3292d9f3955fe82d8ceef4"><div class="ttname"><a href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4">bmp280_status_t</a></div><div class="ttdeci">bmp280_status_t</div><div class="ttdoc">Estados posibles que pueden devolver las funciones del driver.</div><div class="ttdef"><b>Definition</b> BMP280.h:99</div></div>
+<div class="ttc" id="a_b_m_p280_8h_html_a6e1ca14b0a3292d9f3955fe82d8ceef4a29250104589e8cd3fbf99ee9e8e25bdc"><div class="ttname"><a href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4a29250104589e8cd3fbf99ee9e8e25bdc">BMP280_DATA_NOT_RDY</a></div><div class="ttdeci">@ BMP280_DATA_NOT_RDY</div><div class="ttdef"><b>Definition</b> BMP280.h:102</div></div>
+<div class="ttc" id="a_b_m_p280_8h_html_a6e1ca14b0a3292d9f3955fe82d8ceef4a5aab246e404a855c31d37b6d268f24d6"><div class="ttname"><a href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4a5aab246e404a855c31d37b6d268f24d6">BMP280_OK</a></div><div class="ttdeci">@ BMP280_OK</div><div class="ttdef"><b>Definition</b> BMP280.h:100</div></div>
+<div class="ttc" id="a_b_m_p280_8h_html_a6e1ca14b0a3292d9f3955fe82d8ceef4a7020937ca20ac583b8b75064cf0b5713"><div class="ttname"><a href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4a7020937ca20ac583b8b75064cf0b5713">BMP280_ERROR_INVALID_MODE</a></div><div class="ttdeci">@ BMP280_ERROR_INVALID_MODE</div><div class="ttdef"><b>Definition</b> BMP280.h:106</div></div>
+<div class="ttc" id="a_b_m_p280_8h_html_a6e1ca14b0a3292d9f3955fe82d8ceef4a7d8ccf14df43e4751c927e01bd954521"><div class="ttname"><a href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4a7d8ccf14df43e4751c927e01bd954521">BMP280_ERROR_COMM</a></div><div class="ttdeci">@ BMP280_ERROR_COMM</div><div class="ttdef"><b>Definition</b> BMP280.h:104</div></div>
+<div class="ttc" id="a_b_m_p280_8h_html_a6e1ca14b0a3292d9f3955fe82d8ceef4a86046229dd0e66a664af303a617459f9"><div class="ttname"><a href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4a86046229dd0e66a664af303a617459f9">BMP280_ERROR_PARAM</a></div><div class="ttdeci">@ BMP280_ERROR_PARAM</div><div class="ttdef"><b>Definition</b> BMP280.h:103</div></div>
+<div class="ttc" id="a_b_m_p280_8h_html_a6e1ca14b0a3292d9f3955fe82d8ceef4a885f787b0374585aa66a44480c42a1aa"><div class="ttname"><a href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4a885f787b0374585aa66a44480c42a1aa">BMP280_ERROR_INVALID_ID</a></div><div class="ttdeci">@ BMP280_ERROR_INVALID_ID</div><div class="ttdef"><b>Definition</b> BMP280.h:105</div></div>
+<div class="ttc" id="a_b_m_p280_8h_html_a6e1ca14b0a3292d9f3955fe82d8ceef4a982cb2f3bf6191d8fb094da2ff326c68"><div class="ttname"><a href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4a982cb2f3bf6191d8fb094da2ff326c68">BMP280_DATA_RDY</a></div><div class="ttdeci">@ BMP280_DATA_RDY</div><div class="ttdef"><b>Definition</b> BMP280.h:101</div></div>
+<div class="ttc" id="a_b_m_p280_8h_html_a6e1ca14b0a3292d9f3955fe82d8ceef4adb792b3de9483257b1cd6e754fc8fc36"><div class="ttname"><a href="_b_m_p280_8h.html#a6e1ca14b0a3292d9f3955fe82d8ceef4adb792b3de9483257b1cd6e754fc8fc36">BMP280_ERROR_NAN</a></div><div class="ttdeci">@ BMP280_ERROR_NAN</div><div class="ttdef"><b>Definition</b> BMP280.h:107</div></div>
+<div class="ttc" id="a_b_m_p280_8h_html_a703f334cc6707a47c92281e56f931efe"><div class="ttname"><a href="_b_m_p280_8h.html#a703f334cc6707a47c92281e56f931efe">BMP280_Is_Measuring</a></div><div class="ttdeci">bmp280_status_t BMP280_Is_Measuring(void)</div><div class="ttdoc">Verifica si el sensor sigue midiendo.</div><div class="ttdef"><b>Definition</b> BMP280.c:253</div></div>
+<div class="ttc" id="a_b_m_p280_8h_html_ac13b8493cf5593d1ba508df61594fbc6"><div class="ttname"><a href="_b_m_p280_8h.html#ac13b8493cf5593d1ba508df61594fbc6">BMP280_Init</a></div><div class="ttdeci">bmp280_status_t BMP280_Init(void)</div><div class="ttdoc">Inicializa el sensor BMP280.</div><div class="ttdef"><b>Definition</b> BMP280.c:181</div></div>
+<div class="ttc" id="a_b_m_p280__port_8h_html"><div class="ttname"><a href="_b_m_p280__port_8h.html">BMP280_port.h</a></div><div class="ttdoc">Interfaz de bajo nivel para la comunicación SPI con el sensor BMP280.</div></div>
+<div class="ttc" id="astructbmp280__t_html"><div class="ttname"><a href="structbmp280__t.html">bmp280_t</a></div><div class="ttdoc">Estructura de configuración y datos del sensor BMP280.</div><div class="ttdef"><b>Definition</b> BMP280.h:114</div></div>
+<div class="ttc" id="astructbmp280__t_html_ac870e1249bab4a2a68cc4126761d24ef"><div class="ttname"><a href="structbmp280__t.html#ac870e1249bab4a2a68cc4126761d24ef">bmp280_t::pressure</a></div><div class="ttdeci">float pressure</div><div class="ttdef"><b>Definition</b> BMP280.h:117</div></div>
+<div class="ttc" id="astructbmp280__t_html_afc1d28cfbce795d6ea954ebe725241f5"><div class="ttname"><a href="structbmp280__t.html#afc1d28cfbce795d6ea954ebe725241f5">bmp280_t::temperature</a></div><div class="ttdeci">float temperature</div><div class="ttdef"><b>Definition</b> BMP280.h:116</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

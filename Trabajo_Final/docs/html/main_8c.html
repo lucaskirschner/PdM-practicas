@@ -1,0 +1,502 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BMP280_Display_Station: Referencia del archivo C:/Users/Noxie/Desktop/PdM-practicas/Trabajo_Final/BMP280_Display_Station/Core/Src/main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">BMP280_Display_Station<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Trabajo práctico final - PCSE - PdM - CESE</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e2b2265a4c9bde5c5d6085b1fcc82cb8.html">BMP280_Display_Station</a></li><li class="navelem"><a class="el" href="dir_446b09c6b56895b377ee9d9e29f9c883.html">Core</a></li><li class="navelem"><a class="el" href="dir_78e557e51ffd07a20c7ef1a76e91c65b.html">Src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#enum-members">Enumeraciones</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo main.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Programa principal que mide temperatura y presión usando un BMP280, muestra los datos en un display HD44780, y maneja errores mediante una FSM.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
+<code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="_b_m_p280_8h_source.html">BMP280.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_h_d44780_8h_source.html">HD44780.h</a>&quot;</code><br />
+<code>#include &quot;DELAY.h&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a45862b021bf2bc7a937c00cddc2ee025" id="r_a45862b021bf2bc7a937c00cddc2ee025"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a45862b021bf2bc7a937c00cddc2ee025">TEMP_MIN_C</a>&#160;&#160;&#160;25.0</td></tr>
+<tr class="separator:a45862b021bf2bc7a937c00cddc2ee025"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb3a3e39e2412201cb2d3fcfeae1e949" id="r_aeb3a3e39e2412201cb2d3fcfeae1e949"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb3a3e39e2412201cb2d3fcfeae1e949">TEMP_MAX_C</a>&#160;&#160;&#160;30.0</td></tr>
+<tr class="separator:aeb3a3e39e2412201cb2d3fcfeae1e949"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b716a2498f47c4ded0ceeeaf6684eac" id="r_a9b716a2498f47c4ded0ceeeaf6684eac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9b716a2498f47c4ded0ceeeaf6684eac">DELAY_FSM</a>&#160;&#160;&#160;1000</td></tr>
+<tr class="separator:a9b716a2498f47c4ded0ceeeaf6684eac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e5d2e606146d68024af2c3962b02f14" id="r_a9e5d2e606146d68024af2c3962b02f14"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9e5d2e606146d68024af2c3962b02f14">DELAY_LED</a>&#160;&#160;&#160;250</td></tr>
+<tr class="separator:a9e5d2e606146d68024af2c3962b02f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacfc9cad66007cb63b6c9244f771e624" id="r_aacfc9cad66007cb63b6c9244f771e624"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aacfc9cad66007cb63b6c9244f771e624">DELAY_REINIT</a>&#160;&#160;&#160;2000</td></tr>
+<tr class="separator:aacfc9cad66007cb63b6c9244f771e624"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:aa0aafed44fec19806d8f9ad834be1248" id="r_aa0aafed44fec19806d8f9ad834be1248"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa0aafed44fec19806d8f9ad834be1248">state_t</a> { <br />
+&#160;&#160;<a class="el" href="#aa0aafed44fec19806d8f9ad834be1248a57cd068cb4d543f82e45675232702833">INIT_COMPONENTS</a>
+, <a class="el" href="#aa0aafed44fec19806d8f9ad834be1248a16893173948eefdfaa3836bc3dcb6f5c">START_MEASUREMENT</a>
+, <a class="el" href="#aa0aafed44fec19806d8f9ad834be1248ad43e6c703247962037a575f51c76ba1e">WAIT_MEASUREMENT</a>
+, <a class="el" href="#aa0aafed44fec19806d8f9ad834be1248aabf4bfe057b64b1f08fa686fa72a7645">PROCESS_DATA</a>
+, <br />
+&#160;&#160;<a class="el" href="#aa0aafed44fec19806d8f9ad834be1248a968f4c6f79fe49592d452d7aa2714648">ANALYZE_DATA</a>
+, <a class="el" href="#aa0aafed44fec19806d8f9ad834be1248af5ddf775575edaff65cd3674e57b8fcf">DISPLAY_DATA</a>
+, <a class="el" href="#aa0aafed44fec19806d8f9ad834be1248a3dbca2a6576b16fc30af00cbf8ff3b6d">WAIT_TIME</a>
+, <a class="el" href="#aa0aafed44fec19806d8f9ad834be1248aa07813f3418b83dc769daa78689fb9c3">ERROR_STATE</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:aa0aafed44fec19806d8f9ad834be1248"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estados de la máquina de estados principal.  <a href="#aa0aafed44fec19806d8f9ad834be1248">Más...</a><br /></td></tr>
+<tr class="separator:aa0aafed44fec19806d8f9ad834be1248"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a70af21c671abfcc773614a9a4f63d920" id="r_a70af21c671abfcc773614a9a4f63d920"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70af21c671abfcc773614a9a4f63d920">SystemClock_Config</a> (void)</td></tr>
+<tr class="memdesc:a70af21c671abfcc773614a9a4f63d920"><td class="mdescLeft">&#160;</td><td class="mdescRight">System Clock Configuration.  <br /></td></tr>
+<tr class="separator:a70af21c671abfcc773614a9a4f63d920"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe" id="r_a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
+<tr class="memdesc:a840291bc02cba5474a4cb46a9b9566fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The application entry point.  <br /></td></tr>
+<tr class="separator:a840291bc02cba5474a4cb46a9b9566fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1730ffe1e560465665eb47d9264826f9" id="r_a1730ffe1e560465665eb47d9264826f9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1730ffe1e560465665eb47d9264826f9">Error_Handler</a> (void)</td></tr>
+<tr class="memdesc:a1730ffe1e560465665eb47d9264826f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is executed in case of error occurrence.  <br /></td></tr>
+<tr class="separator:a1730ffe1e560465665eb47d9264826f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:af7b2c26e44dadaaa798a5c3d82914ba7" id="r_af7b2c26e44dadaaa798a5c3d82914ba7"><td class="memItemLeft" align="right" valign="top">I2C_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7b2c26e44dadaaa798a5c3d82914ba7">hi2c1</a></td></tr>
+<tr class="separator:af7b2c26e44dadaaa798a5c3d82914ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec51920045aad7f70cbfd1f58228d866" id="r_aec51920045aad7f70cbfd1f58228d866"><td class="memItemLeft" align="right" valign="top">SPI_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aec51920045aad7f70cbfd1f58228d866">hspi3</a></td></tr>
+<tr class="separator:aec51920045aad7f70cbfd1f58228d866"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a772a4691b6748c7a9d536756ff6268aa" id="r_a772a4691b6748c7a9d536756ff6268aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structbmp280__t.html">bmp280_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a772a4691b6748c7a9d536756ff6268aa">bmp</a></td></tr>
+<tr class="separator:a772a4691b6748c7a9d536756ff6268aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a499e7824037af983d0524a98081e7f0b" id="r_a499e7824037af983d0524a98081e7f0b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#aa0aafed44fec19806d8f9ad834be1248">state_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a499e7824037af983d0524a98081e7f0b">state</a></td></tr>
+<tr class="separator:a499e7824037af983d0524a98081e7f0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a055cfb6d9855e09e9cd55b57c5843913" id="r_a055cfb6d9855e09e9cd55b57c5843913"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdelay__t.html">delay_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a055cfb6d9855e09e9cd55b57c5843913">delayFSM</a></td></tr>
+<tr class="separator:a055cfb6d9855e09e9cd55b57c5843913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa63b3bcd2c1cf187e436eb24880ce804" id="r_aa63b3bcd2c1cf187e436eb24880ce804"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdelay__t.html">delay_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa63b3bcd2c1cf187e436eb24880ce804">delayLED</a></td></tr>
+<tr class="separator:aa63b3bcd2c1cf187e436eb24880ce804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07ff93ba9ee114c3c3332d58e9406565" id="r_a07ff93ba9ee114c3c3332d58e9406565"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structdelay__t.html">delay_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07ff93ba9ee114c3c3332d58e9406565">delayReinit</a></td></tr>
+<tr class="separator:a07ff93ba9ee114c3c3332d58e9406565"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf0a10b451510532967e3dc708e93254" id="r_abf0a10b451510532967e3dc708e93254"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf0a10b451510532967e3dc708e93254">tempOutRange</a></td></tr>
+<tr class="separator:abf0a10b451510532967e3dc708e93254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Programa principal que mide temperatura y presión usando un BMP280, muestra los datos en un display HD44780, y maneja errores mediante una FSM. </p>
+<dl class="section author"><dt>Autor</dt><dd>Ing. Lucas Kirschner </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>2 Apr 2025  </dd></dl>
+</div><h2 class="groupheader">Documentación de «define»</h2>
+<a id="a9b716a2498f47c4ded0ceeeaf6684eac" name="a9b716a2498f47c4ded0ceeeaf6684eac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b716a2498f47c4ded0ceeeaf6684eac">&#9670;&#160;</a></span>DELAY_FSM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DELAY_FSM&#160;&#160;&#160;1000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Período de actualización de la FSM (ms) </p>
+
+</div>
+</div>
+<a id="a9e5d2e606146d68024af2c3962b02f14" name="a9e5d2e606146d68024af2c3962b02f14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e5d2e606146d68024af2c3962b02f14">&#9670;&#160;</a></span>DELAY_LED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DELAY_LED&#160;&#160;&#160;250</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Período de parpadeo del LED en estado de error (ms) </p>
+
+</div>
+</div>
+<a id="aacfc9cad66007cb63b6c9244f771e624" name="aacfc9cad66007cb63b6c9244f771e624"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacfc9cad66007cb63b6c9244f771e624">&#9670;&#160;</a></span>DELAY_REINIT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DELAY_REINIT&#160;&#160;&#160;2000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Tiempo de espera para reintentar inicialización tras un error (ms) </p>
+
+</div>
+</div>
+<a id="aeb3a3e39e2412201cb2d3fcfeae1e949" name="aeb3a3e39e2412201cb2d3fcfeae1e949"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb3a3e39e2412201cb2d3fcfeae1e949">&#9670;&#160;</a></span>TEMP_MAX_C</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMP_MAX_C&#160;&#160;&#160;30.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Temperatura máxima aceptada (°C) </p>
+
+</div>
+</div>
+<a id="a45862b021bf2bc7a937c00cddc2ee025" name="a45862b021bf2bc7a937c00cddc2ee025"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45862b021bf2bc7a937c00cddc2ee025">&#9670;&#160;</a></span>TEMP_MIN_C</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TEMP_MIN_C&#160;&#160;&#160;25.0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Temperatura mínima aceptada (°C) </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de enumeraciones</h2>
+<a id="aa0aafed44fec19806d8f9ad834be1248" name="aa0aafed44fec19806d8f9ad834be1248"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0aafed44fec19806d8f9ad834be1248">&#9670;&#160;</a></span>state_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#aa0aafed44fec19806d8f9ad834be1248">state_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Estados de la máquina de estados principal. </p>
+<p>&lt; Manejo de tipos estándar &lt; Manejo de tipos booleanos estándar &lt; Librería para el manejo del sensor BMP280 &lt; Librería para el control del display LCD HD44780 &lt; Librería para funciones de retardo </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="aa0aafed44fec19806d8f9ad834be1248a57cd068cb4d543f82e45675232702833" name="aa0aafed44fec19806d8f9ad834be1248a57cd068cb4d543f82e45675232702833"></a>INIT_COMPONENTS&#160;</td><td class="fielddoc"><p>Inicialización de periféricos y dispositivos </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa0aafed44fec19806d8f9ad834be1248a16893173948eefdfaa3836bc3dcb6f5c" name="aa0aafed44fec19806d8f9ad834be1248a16893173948eefdfaa3836bc3dcb6f5c"></a>START_MEASUREMENT&#160;</td><td class="fielddoc"><p>Inicio de medición del sensor BMP280 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa0aafed44fec19806d8f9ad834be1248ad43e6c703247962037a575f51c76ba1e" name="aa0aafed44fec19806d8f9ad834be1248ad43e6c703247962037a575f51c76ba1e"></a>WAIT_MEASUREMENT&#160;</td><td class="fielddoc"><p>Espera a que finalice la medición </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa0aafed44fec19806d8f9ad834be1248aabf4bfe057b64b1f08fa686fa72a7645" name="aa0aafed44fec19806d8f9ad834be1248aabf4bfe057b64b1f08fa686fa72a7645"></a>PROCESS_DATA&#160;</td><td class="fielddoc"><p>Procesamiento de datos del sensor </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa0aafed44fec19806d8f9ad834be1248a968f4c6f79fe49592d452d7aa2714648" name="aa0aafed44fec19806d8f9ad834be1248a968f4c6f79fe49592d452d7aa2714648"></a>ANALYZE_DATA&#160;</td><td class="fielddoc"><p>Análisis de los datos medidos </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa0aafed44fec19806d8f9ad834be1248af5ddf775575edaff65cd3674e57b8fcf" name="aa0aafed44fec19806d8f9ad834be1248af5ddf775575edaff65cd3674e57b8fcf"></a>DISPLAY_DATA&#160;</td><td class="fielddoc"><p>Actualización del display con datos medidos </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa0aafed44fec19806d8f9ad834be1248a3dbca2a6576b16fc30af00cbf8ff3b6d" name="aa0aafed44fec19806d8f9ad834be1248a3dbca2a6576b16fc30af00cbf8ff3b6d"></a>WAIT_TIME&#160;</td><td class="fielddoc"><p>Espera de tiempo entre mediciones (no implementado en esta versión) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aa0aafed44fec19806d8f9ad834be1248aa07813f3418b83dc769daa78689fb9c3" name="aa0aafed44fec19806d8f9ad834be1248aa07813f3418b83dc769daa78689fb9c3"></a>ERROR_STATE&#160;</td><td class="fielddoc"><p>Manejo de errores </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a1730ffe1e560465665eb47d9264826f9" name="a1730ffe1e560465665eb47d9264826f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1730ffe1e560465665eb47d9264826f9">&#9670;&#160;</a></span>Error_Handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Error_Handler </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function is executed in case of error occurrence. </p>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a840291bc02cba5474a4cb46a9b9566fe" name="a840291bc02cba5474a4cb46a9b9566fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a840291bc02cba5474a4cb46a9b9566fe">&#9670;&#160;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The application entry point. </p>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">int</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>&lt; Inicializa la máquina de estados</p>
+<p>&lt; Actualiza la máquina de estados</p>
+
+</div>
+</div>
+<a id="a70af21c671abfcc773614a9a4f63d920" name="a70af21c671abfcc773614a9a4f63d920"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70af21c671abfcc773614a9a4f63d920">&#9670;&#160;</a></span>SystemClock_Config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SystemClock_Config </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>System Clock Configuration. </p>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">None</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Configure the main internal regulator output voltage</p>
+<p>Initializes the RCC Oscillators according to the specified parameters in the RCC_OscInitTypeDef structure.</p>
+<p>Initializes the CPU, AHB and APB buses clocks</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de variables</h2>
+<a id="a772a4691b6748c7a9d536756ff6268aa" name="a772a4691b6748c7a9d536756ff6268aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a772a4691b6748c7a9d536756ff6268aa">&#9670;&#160;</a></span>bmp</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structbmp280__t.html">bmp280_t</a> bmp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Estructura de datos del sensor BMP280 </p>
+
+</div>
+</div>
+<a id="a055cfb6d9855e09e9cd55b57c5843913" name="a055cfb6d9855e09e9cd55b57c5843913"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a055cfb6d9855e09e9cd55b57c5843913">&#9670;&#160;</a></span>delayFSM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdelay__t.html">delay_t</a> delayFSM</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Temporizador para el control de la FSM </p>
+
+</div>
+</div>
+<a id="aa63b3bcd2c1cf187e436eb24880ce804" name="aa63b3bcd2c1cf187e436eb24880ce804"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa63b3bcd2c1cf187e436eb24880ce804">&#9670;&#160;</a></span>delayLED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdelay__t.html">delay_t</a> delayLED</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Temporizador para el parpadeo del LED </p>
+
+</div>
+</div>
+<a id="a07ff93ba9ee114c3c3332d58e9406565" name="a07ff93ba9ee114c3c3332d58e9406565"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07ff93ba9ee114c3c3332d58e9406565">&#9670;&#160;</a></span>delayReinit</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structdelay__t.html">delay_t</a> delayReinit</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Temporizador para reintento de inicialización </p>
+
+</div>
+</div>
+<a id="af7b2c26e44dadaaa798a5c3d82914ba7" name="af7b2c26e44dadaaa798a5c3d82914ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7b2c26e44dadaaa798a5c3d82914ba7">&#9670;&#160;</a></span>hi2c1</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">I2C_HandleTypeDef hi2c1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Manejador de la interfaz I2C definida en el proyecto </p>
+
+</div>
+</div>
+<a id="aec51920045aad7f70cbfd1f58228d866" name="aec51920045aad7f70cbfd1f58228d866"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec51920045aad7f70cbfd1f58228d866">&#9670;&#160;</a></span>hspi3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SPI_HandleTypeDef hspi3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>SPI usado para el BMP280 (ajustar según interfaz usada) </p>
+
+</div>
+</div>
+<a id="a499e7824037af983d0524a98081e7f0b" name="a499e7824037af983d0524a98081e7f0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a499e7824037af983d0524a98081e7f0b">&#9670;&#160;</a></span>state</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#aa0aafed44fec19806d8f9ad834be1248">state_t</a> state</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Estado actual de la máquina de estados </p>
+
+</div>
+</div>
+<a id="abf0a10b451510532967e3dc708e93254" name="abf0a10b451510532967e3dc708e93254"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf0a10b451510532967e3dc708e93254">&#9670;&#160;</a></span>tempOutRange</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool tempOutRange</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Bandera que indica si la temperatura está fuera de rango) </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

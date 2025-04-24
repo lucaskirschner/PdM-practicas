@@ -1,0 +1,398 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BMP280_Display_Station: Instrucciones IR del HD44780</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">BMP280_Display_Station<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Trabajo práctico final - PCSE - PdM - CESE</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a>  </div>
+  <div class="headertitle"><div class="title">Instrucciones IR del HD44780</div></div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:gabbd352944fa95fe44d6af0dc8b3e4c0b" id="r_gabbd352944fa95fe44d6af0dc8b3e4c0b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gabbd352944fa95fe44d6af0dc8b3e4c0b">IR_CLEAR_DISPLAY</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:gabbd352944fa95fe44d6af0dc8b3e4c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b03384ff62e6b882e4940db13fdf15f" id="r_ga4b03384ff62e6b882e4940db13fdf15f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4b03384ff62e6b882e4940db13fdf15f">IR_RETURN_HOME</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:ga4b03384ff62e6b882e4940db13fdf15f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2f3db200e5cb76c317f28e89df879a8f" id="r_ga2f3db200e5cb76c317f28e89df879a8f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2f3db200e5cb76c317f28e89df879a8f">IR_ENTRY_MODE_SET</a>(ID,  S)</td></tr>
+<tr class="memdesc:ga2f3db200e5cb76c317f28e89df879a8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Genera instrucción de configuración de modo de entrada.  <br /></td></tr>
+<tr class="separator:ga2f3db200e5cb76c317f28e89df879a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4c239366d2a36ea9e06ee07f6025b4a5" id="r_ga4c239366d2a36ea9e06ee07f6025b4a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga4c239366d2a36ea9e06ee07f6025b4a5">IR_DISPLAY_CONTROL</a>(D,  C,  B)</td></tr>
+<tr class="memdesc:ga4c239366d2a36ea9e06ee07f6025b4a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Genera instrucción de control de visualización.  <br /></td></tr>
+<tr class="separator:ga4c239366d2a36ea9e06ee07f6025b4a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga658f73d69948dcf36b75ea247faeff01" id="r_ga658f73d69948dcf36b75ea247faeff01"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga658f73d69948dcf36b75ea247faeff01">IR_CURSOR_DISPLAY_SHIFT</a>(SC,  RL)</td></tr>
+<tr class="memdesc:ga658f73d69948dcf36b75ea247faeff01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Genera instrucción de desplazamiento de cursor/display.  <br /></td></tr>
+<tr class="separator:ga658f73d69948dcf36b75ea247faeff01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a92d9abfdfc1fe00d9cc7c6d017a500" id="r_ga0a92d9abfdfc1fe00d9cc7c6d017a500"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0a92d9abfdfc1fe00d9cc7c6d017a500">IR_FUNCTION_SET</a>(DL,  N,  F)</td></tr>
+<tr class="memdesc:ga0a92d9abfdfc1fe00d9cc7c6d017a500"><td class="mdescLeft">&#160;</td><td class="mdescRight">Genera instrucción de configuración de interfaz.  <br /></td></tr>
+<tr class="separator:ga0a92d9abfdfc1fe00d9cc7c6d017a500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadab8d2a678fdb0f8e2720ba89339e138" id="r_gadab8d2a678fdb0f8e2720ba89339e138"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gadab8d2a678fdb0f8e2720ba89339e138">IR_SET_CGRAM_ADDR</a>(addr)</td></tr>
+<tr class="memdesc:gadab8d2a678fdb0f8e2720ba89339e138"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece la dirección de memoria CGRAM.  <br /></td></tr>
+<tr class="separator:gadab8d2a678fdb0f8e2720ba89339e138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0b1b64d6aaaeda24dbec4698b79e184f" id="r_ga0b1b64d6aaaeda24dbec4698b79e184f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga0b1b64d6aaaeda24dbec4698b79e184f">IR_SET_DDRAM_ADDR</a>(addr)</td></tr>
+<tr class="memdesc:ga0b1b64d6aaaeda24dbec4698b79e184f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece la dirección de memoria DDRAM.  <br /></td></tr>
+<tr class="separator:ga0b1b64d6aaaeda24dbec4698b79e184f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<h2 class="groupheader">Documentación de «define»</h2>
+<a id="gabbd352944fa95fe44d6af0dc8b3e4c0b" name="gabbd352944fa95fe44d6af0dc8b3e4c0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabbd352944fa95fe44d6af0dc8b3e4c0b">&#9670;&#160;</a></span>IR_CLEAR_DISPLAY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IR_CLEAR_DISPLAY&#160;&#160;&#160;0x01</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Limpia el display y retorna el cursor a la posición inicial (DDRAM). </p>
+
+</div>
+</div>
+<a id="ga658f73d69948dcf36b75ea247faeff01" name="ga658f73d69948dcf36b75ea247faeff01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga658f73d69948dcf36b75ea247faeff01">&#9670;&#160;</a></span>IR_CURSOR_DISPLAY_SHIFT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IR_CURSOR_DISPLAY_SHIFT</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>SC</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>RL</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">(0x10 | ((SC) &lt;&lt; 3) | ((RL) &lt;&lt; 2))</div>
+</div><!-- fragment -->
+<p>Genera instrucción de desplazamiento de cursor/display. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">SC</td><td>Selección del desplazamiento:<ul>
+<li>1: Display.</li>
+<li>0: Cursor. </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">RL</td><td>Dirección:<ul>
+<li>1: Derecha.</li>
+<li>0: Izquierda. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Instrucción de desplazamiento. </dd></dl>
+
+</div>
+</div>
+<a id="ga4c239366d2a36ea9e06ee07f6025b4a5" name="ga4c239366d2a36ea9e06ee07f6025b4a5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4c239366d2a36ea9e06ee07f6025b4a5">&#9670;&#160;</a></span>IR_DISPLAY_CONTROL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IR_DISPLAY_CONTROL</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>D</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>C</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>B</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">(0x08 | ((D) &lt;&lt; 2) | ((C) &lt;&lt; 1) | (B))</div>
+</div><!-- fragment -->
+<p>Genera instrucción de control de visualización. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">D</td><td>Display ON/OFF:<ul>
+<li>1: Encendido.</li>
+<li>0: Apagado. </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">C</td><td>Cursor ON/OFF:<ul>
+<li>1: Visible.</li>
+<li>0: Oculto. </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">B</td><td>Blink ON/OFF:<ul>
+<li>1: Cursor parpadeante.</li>
+<li>0: Sin parpadeo. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Instrucción de control de display. </dd></dl>
+
+</div>
+</div>
+<a id="ga2f3db200e5cb76c317f28e89df879a8f" name="ga2f3db200e5cb76c317f28e89df879a8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2f3db200e5cb76c317f28e89df879a8f">&#9670;&#160;</a></span>IR_ENTRY_MODE_SET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IR_ENTRY_MODE_SET</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>ID</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>S</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">(0x04 | ((ID) &lt;&lt; 1) | (S))</div>
+</div><!-- fragment -->
+<p>Genera instrucción de configuración de modo de entrada. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ID</td><td>Dirección del incremento:<ul>
+<li>1: Incrementa el cursor.</li>
+<li>0: Decrementa el cursor. </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">S</td><td>Desplazamiento de display:<ul>
+<li>1: Desplaza el display según ID.</li>
+<li>0: No desplaza. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Instrucción para modo de entrada. </dd></dl>
+
+</div>
+</div>
+<a id="ga0a92d9abfdfc1fe00d9cc7c6d017a500" name="ga0a92d9abfdfc1fe00d9cc7c6d017a500"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0a92d9abfdfc1fe00d9cc7c6d017a500">&#9670;&#160;</a></span>IR_FUNCTION_SET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IR_FUNCTION_SET</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>DL</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>N</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>F</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">(0x20 | ((DL) &lt;&lt; 4) | ((N) &lt;&lt; 3) | ((F) &lt;&lt; 2))</div>
+</div><!-- fragment -->
+<p>Genera instrucción de configuración de interfaz. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DL</td><td>Bus de datos:<ul>
+<li>1: 8 bits.</li>
+<li>0: 4 bits. </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">N</td><td>Número de líneas:<ul>
+<li>1: 2 líneas.</li>
+<li>0: 1 línea. </li>
+</ul>
+</td></tr>
+    <tr><td class="paramname">F</td><td>Fuente:<ul>
+<li>1: 5x10 puntos.</li>
+<li>0: 5x8 puntos. </li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Instrucción de selección de función. </dd></dl>
+
+</div>
+</div>
+<a id="ga4b03384ff62e6b882e4940db13fdf15f" name="ga4b03384ff62e6b882e4940db13fdf15f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4b03384ff62e6b882e4940db13fdf15f">&#9670;&#160;</a></span>IR_RETURN_HOME</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IR_RETURN_HOME&#160;&#160;&#160;0x02</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Retorna el cursor y el display a su posición inicial sin alterar DDRAM. </p>
+
+</div>
+</div>
+<a id="gadab8d2a678fdb0f8e2720ba89339e138" name="gadab8d2a678fdb0f8e2720ba89339e138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gadab8d2a678fdb0f8e2720ba89339e138">&#9670;&#160;</a></span>IR_SET_CGRAM_ADDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IR_SET_CGRAM_ADDR</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>addr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">(0x40 | ((addr) &amp; 0x3F))</div>
+</div><!-- fragment -->
+<p>Establece la dirección de memoria CGRAM. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>Dirección de CGRAM (6 bits). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Instrucción para CGRAM. </dd></dl>
+
+</div>
+</div>
+<a id="ga0b1b64d6aaaeda24dbec4698b79e184f" name="ga0b1b64d6aaaeda24dbec4698b79e184f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0b1b64d6aaaeda24dbec4698b79e184f">&#9670;&#160;</a></span>IR_SET_DDRAM_ADDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define IR_SET_DDRAM_ADDR</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname"><em>addr</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valor:</b><div class="fragment"><div class="line">(0x80 | ((addr) &amp; 0x7F))</div>
+</div><!-- fragment -->
+<p>Establece la dirección de memoria DDRAM. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addr</td><td>Dirección de DDRAM (7 bits). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Instrucción para DDRAM. </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,534 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BMP280_Display_Station: Referencia del archivo C:/Users/Noxie/Desktop/PdM-practicas/Trabajo_Final/BMP280_Display_Station/Core/API/HD44780/Src/HD44780_port.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">BMP280_Display_Station<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Trabajo práctico final - PCSE - PdM - CESE</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e2b2265a4c9bde5c5d6085b1fcc82cb8.html">BMP280_Display_Station</a></li><li class="navelem"><a class="el" href="dir_446b09c6b56895b377ee9d9e29f9c883.html">Core</a></li><li class="navelem"><a class="el" href="dir_8835e12ddf74463c939342ccbda43e39.html">API</a></li><li class="navelem"><a class="el" href="dir_93ee93e47e3ad994d0821d60a0becbc3.html">HD44780</a></li><li class="navelem"><a class="el" href="dir_7f0f4ade78b509d0472a7bb48ab58e2a.html">Src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo HD44780_port.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implementación de las funciones de bajo nivel para controlar un LCD HD44780 mediante I2C.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_h_d44780__port_8h_source.html">HD44780_port.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:af614984f22940cfb1395cbe4c1ec4e65" id="r_af614984f22940cfb1395cbe4c1ec4e65"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af614984f22940cfb1395cbe4c1ec4e65">DELAY_TIME_1MS</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:af614984f22940cfb1395cbe4c1ec4e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac8c61bd2fdc391886d8da5c2de78292a" id="r_ac8c61bd2fdc391886d8da5c2de78292a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8c61bd2fdc391886d8da5c2de78292a">I2C_TIMEOUT_MS</a>&#160;&#160;&#160;50</td></tr>
+<tr class="separator:ac8c61bd2fdc391886d8da5c2de78292a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a516d500171458b4221584a986fd7eb2d" id="r_a516d500171458b4221584a986fd7eb2d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a516d500171458b4221584a986fd7eb2d">BL_MASK</a>&#160;&#160;&#160;(1 &lt;&lt; 3)</td></tr>
+<tr class="separator:a516d500171458b4221584a986fd7eb2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8e22b44b9509773d886f8acf4d1a633" id="r_ae8e22b44b9509773d886f8acf4d1a633"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8e22b44b9509773d886f8acf4d1a633">EN_MASK</a>&#160;&#160;&#160;(1 &lt;&lt; 2)</td></tr>
+<tr class="separator:ae8e22b44b9509773d886f8acf4d1a633"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad208a790e942eaf149f14cc56917cee2" id="r_ad208a790e942eaf149f14cc56917cee2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad208a790e942eaf149f14cc56917cee2">RW_MASK_WRITE</a>&#160;&#160;&#160;(0 &lt;&lt; 1)</td></tr>
+<tr class="separator:ad208a790e942eaf149f14cc56917cee2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa673096e0e13005f4b9eae53dbb26196" id="r_aa673096e0e13005f4b9eae53dbb26196"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa673096e0e13005f4b9eae53dbb26196">RW_MASK_READ</a>&#160;&#160;&#160;(1 &lt;&lt; 1)</td></tr>
+<tr class="separator:aa673096e0e13005f4b9eae53dbb26196"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ffaacb5e2d32787d5912f2ad84bae58" id="r_a1ffaacb5e2d32787d5912f2ad84bae58"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ffaacb5e2d32787d5912f2ad84bae58">RS_MASK_IR</a>&#160;&#160;&#160;(0 &lt;&lt; 0)</td></tr>
+<tr class="separator:a1ffaacb5e2d32787d5912f2ad84bae58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb1bbfac974bea289da36a101d5c7d9" id="r_afeb1bbfac974bea289da36a101d5c7d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afeb1bbfac974bea289da36a101d5c7d9">RS_MASK_DATA</a>&#160;&#160;&#160;(1 &lt;&lt; 0)</td></tr>
+<tr class="separator:afeb1bbfac974bea289da36a101d5c7d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f1c0edd0a22eee2033fa9ebc43696cf" id="r_a4f1c0edd0a22eee2033fa9ebc43696cf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4f1c0edd0a22eee2033fa9ebc43696cf">NIBBLE_SHIFT</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:a4f1c0edd0a22eee2033fa9ebc43696cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99d287e3d76b5dc3cbc987f8ba912ca3" id="r_a99d287e3d76b5dc3cbc987f8ba912ca3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99d287e3d76b5dc3cbc987f8ba912ca3">LOW_NIBBLE_MASK</a>&#160;&#160;&#160;0x0F</td></tr>
+<tr class="separator:a99d287e3d76b5dc3cbc987f8ba912ca3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5812e430f981017144eb399e452443a" id="r_ab5812e430f981017144eb399e452443a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5812e430f981017144eb399e452443a">HIGH_NIBBLE_MASK</a>&#160;&#160;&#160;0xF0</td></tr>
+<tr class="separator:ab5812e430f981017144eb399e452443a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea99a65cc854b179e82ce6bb5f25f2ef" id="r_aea99a65cc854b179e82ce6bb5f25f2ef"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea99a65cc854b179e82ce6bb5f25f2ef">WRITE_DEV_ADDR</a>&#160;&#160;&#160;((<a class="el" href="_h_d44780__port_8h.html#ac72da9845e02d812f88c208986ac5f4e">DEV_ADDRESS</a> &lt;&lt; 1) &amp; 0xFE)</td></tr>
+<tr class="separator:aea99a65cc854b179e82ce6bb5f25f2ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a535260873edc650d2e2566e461b4585e" id="r_a535260873edc650d2e2566e461b4585e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a535260873edc650d2e2566e461b4585e">READ_DEV_ADDR</a>&#160;&#160;&#160;((<a class="el" href="_h_d44780__port_8h.html#ac72da9845e02d812f88c208986ac5f4e">DEV_ADDRESS</a> &lt;&lt; 1) | 0x01)</td></tr>
+<tr class="separator:a535260873edc650d2e2566e461b4585e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a93b6001f93049c307c30230fdc8c109f" id="r_a93b6001f93049c307c30230fdc8c109f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_d44780__port_8h.html#ab194b4b2fa261462b2a38b239498cc68">hd44780_port_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93b6001f93049c307c30230fdc8c109f">HD44780_Port_Init</a> (void)</td></tr>
+<tr class="memdesc:a93b6001f93049c307c30230fdc8c109f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa la interfaz usada por el HD44780.  <br /></td></tr>
+<tr class="separator:a93b6001f93049c307c30230fdc8c109f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aef9a88f9e1e4213fabaf9e2e2b6c69" id="r_a7aef9a88f9e1e4213fabaf9e2e2b6c69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7aef9a88f9e1e4213fabaf9e2e2b6c69">HD44780_Port_Delay</a> (uint32_t delay)</td></tr>
+<tr class="memdesc:a7aef9a88f9e1e4213fabaf9e2e2b6c69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Realiza una espera bloqueante en milisegundos.  <br /></td></tr>
+<tr class="separator:a7aef9a88f9e1e4213fabaf9e2e2b6c69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2806bea81228f2954e72bfc274bda19" id="r_aa2806bea81228f2954e72bfc274bda19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_d44780__port_8h.html#ab194b4b2fa261462b2a38b239498cc68">hd44780_port_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2806bea81228f2954e72bfc274bda19">HD44780_Port_Send_Nibble</a> (uint8_t nibbleWrite, bool rs)</td></tr>
+<tr class="memdesc:aa2806bea81228f2954e72bfc274bda19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envía un nibble (4 bits) al display HD44780 mediante la expansión I2C del PCF8574.  <br /></td></tr>
+<tr class="separator:aa2806bea81228f2954e72bfc274bda19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8816c8a80d789637e31cfe63052df5ce" id="r_a8816c8a80d789637e31cfe63052df5ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_h_d44780__port_8h.html#ab194b4b2fa261462b2a38b239498cc68">hd44780_port_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8816c8a80d789637e31cfe63052df5ce">HD44780_Port_Send_Byte</a> (uint8_t byteWrite, bool rs)</td></tr>
+<tr class="memdesc:a8816c8a80d789637e31cfe63052df5ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe un byte completo al LCD (en dos fases de 4 bits).  <br /></td></tr>
+<tr class="separator:a8816c8a80d789637e31cfe63052df5ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:af7b2c26e44dadaaa798a5c3d82914ba7" id="r_af7b2c26e44dadaaa798a5c3d82914ba7"><td class="memItemLeft" align="right" valign="top">I2C_HandleTypeDef&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af7b2c26e44dadaaa798a5c3d82914ba7">hi2c1</a></td></tr>
+<tr class="separator:af7b2c26e44dadaaa798a5c3d82914ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Implementación de las funciones de bajo nivel para controlar un LCD HD44780 mediante I2C. </p>
+<dl class="section author"><dt>Autor</dt><dd>Ing. Lucas Kirschner </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>10 Apr 2025 </dd></dl>
+<p>Utiliza la biblioteca HAL de STM32 para la comunicación I2C con el expansor PCF8574, permitiendo el control del display en modo 4 bits mediante software. </p>
+</div><h2 class="groupheader">Documentación de «define»</h2>
+<a id="a516d500171458b4221584a986fd7eb2d" name="a516d500171458b4221584a986fd7eb2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a516d500171458b4221584a986fd7eb2d">&#9670;&#160;</a></span>BL_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define BL_MASK&#160;&#160;&#160;(1 &lt;&lt; 3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Bit de control de retroiluminación </p>
+
+</div>
+</div>
+<a id="af614984f22940cfb1395cbe4c1ec4e65" name="af614984f22940cfb1395cbe4c1ec4e65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af614984f22940cfb1395cbe4c1ec4e65">&#9670;&#160;</a></span>DELAY_TIME_1MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define DELAY_TIME_1MS&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Tiempo base de retardo en milisegundos (1 ms) </p>
+
+</div>
+</div>
+<a id="ae8e22b44b9509773d886f8acf4d1a633" name="ae8e22b44b9509773d886f8acf4d1a633"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8e22b44b9509773d886f8acf4d1a633">&#9670;&#160;</a></span>EN_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define EN_MASK&#160;&#160;&#160;(1 &lt;&lt; 2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Bit de control ENABLE para latch de datos </p>
+
+</div>
+</div>
+<a id="ab5812e430f981017144eb399e452443a" name="ab5812e430f981017144eb399e452443a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5812e430f981017144eb399e452443a">&#9670;&#160;</a></span>HIGH_NIBBLE_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define HIGH_NIBBLE_MASK&#160;&#160;&#160;0xF0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Máscara para extraer los 4 bits altos </p>
+
+</div>
+</div>
+<a id="ac8c61bd2fdc391886d8da5c2de78292a" name="ac8c61bd2fdc391886d8da5c2de78292a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8c61bd2fdc391886d8da5c2de78292a">&#9670;&#160;</a></span>I2C_TIMEOUT_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define I2C_TIMEOUT_MS&#160;&#160;&#160;50</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Timeout para las transmisiones I2C </p>
+
+</div>
+</div>
+<a id="a99d287e3d76b5dc3cbc987f8ba912ca3" name="a99d287e3d76b5dc3cbc987f8ba912ca3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99d287e3d76b5dc3cbc987f8ba912ca3">&#9670;&#160;</a></span>LOW_NIBBLE_MASK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOW_NIBBLE_MASK&#160;&#160;&#160;0x0F</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Máscara para extraer los 4 bits bajos </p>
+
+</div>
+</div>
+<a id="a4f1c0edd0a22eee2033fa9ebc43696cf" name="a4f1c0edd0a22eee2033fa9ebc43696cf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f1c0edd0a22eee2033fa9ebc43696cf">&#9670;&#160;</a></span>NIBBLE_SHIFT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NIBBLE_SHIFT&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Corrimiento de nibble para enviarlo por DB7-DB4 </p>
+
+</div>
+</div>
+<a id="a535260873edc650d2e2566e461b4585e" name="a535260873edc650d2e2566e461b4585e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a535260873edc650d2e2566e461b4585e">&#9670;&#160;</a></span>READ_DEV_ADDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define READ_DEV_ADDR&#160;&#160;&#160;((<a class="el" href="_h_d44780__port_8h.html#ac72da9845e02d812f88c208986ac5f4e">DEV_ADDRESS</a> &lt;&lt; 1) | 0x01)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dirección para lectura I2C (bit LSB en 1) </p>
+
+</div>
+</div>
+<a id="afeb1bbfac974bea289da36a101d5c7d9" name="afeb1bbfac974bea289da36a101d5c7d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeb1bbfac974bea289da36a101d5c7d9">&#9670;&#160;</a></span>RS_MASK_DATA</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RS_MASK_DATA&#160;&#160;&#160;(1 &lt;&lt; 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RS en 1 → Registro de datos </p>
+
+</div>
+</div>
+<a id="a1ffaacb5e2d32787d5912f2ad84bae58" name="a1ffaacb5e2d32787d5912f2ad84bae58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ffaacb5e2d32787d5912f2ad84bae58">&#9670;&#160;</a></span>RS_MASK_IR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RS_MASK_IR&#160;&#160;&#160;(0 &lt;&lt; 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RS en 0 → Registro de instrucción </p>
+
+</div>
+</div>
+<a id="aa673096e0e13005f4b9eae53dbb26196" name="aa673096e0e13005f4b9eae53dbb26196"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa673096e0e13005f4b9eae53dbb26196">&#9670;&#160;</a></span>RW_MASK_READ</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RW_MASK_READ&#160;&#160;&#160;(1 &lt;&lt; 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RW en 1 → Lectura (no usado en esta implementación) </p>
+
+</div>
+</div>
+<a id="ad208a790e942eaf149f14cc56917cee2" name="ad208a790e942eaf149f14cc56917cee2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad208a790e942eaf149f14cc56917cee2">&#9670;&#160;</a></span>RW_MASK_WRITE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RW_MASK_WRITE&#160;&#160;&#160;(0 &lt;&lt; 1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>RW en 0 → Escritura </p>
+
+</div>
+</div>
+<a id="aea99a65cc854b179e82ce6bb5f25f2ef" name="aea99a65cc854b179e82ce6bb5f25f2ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea99a65cc854b179e82ce6bb5f25f2ef">&#9670;&#160;</a></span>WRITE_DEV_ADDR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WRITE_DEV_ADDR&#160;&#160;&#160;((<a class="el" href="_h_d44780__port_8h.html#ac72da9845e02d812f88c208986ac5f4e">DEV_ADDRESS</a> &lt;&lt; 1) &amp; 0xFE)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Dirección para escritura I2C (bit LSB en 0) </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a7aef9a88f9e1e4213fabaf9e2e2b6c69" name="a7aef9a88f9e1e4213fabaf9e2e2b6c69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aef9a88f9e1e4213fabaf9e2e2b6c69">&#9670;&#160;</a></span>HD44780_Port_Delay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HD44780_Port_Delay </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>delay</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Realiza una espera bloqueante en milisegundos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delay</td><td>Tiempo de espera en milisegundos. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a93b6001f93049c307c30230fdc8c109f" name="a93b6001f93049c307c30230fdc8c109f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93b6001f93049c307c30230fdc8c109f">&#9670;&#160;</a></span>HD44780_Port_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h_d44780__port_8h.html#ab194b4b2fa261462b2a38b239498cc68">hd44780_port_status_t</a> HD44780_Port_Init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa la interfaz usada por el HD44780. </p>
+<p>Esta función puede incluir configuraciones específicas del periférico I2C si fuera necesario. En esta implementación, se asume que la inicialización se realiza externamente mediante la HAL. </p>
+
+</div>
+</div>
+<a id="a8816c8a80d789637e31cfe63052df5ce" name="a8816c8a80d789637e31cfe63052df5ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8816c8a80d789637e31cfe63052df5ce">&#9670;&#160;</a></span>HD44780_Port_Send_Byte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h_d44780__port_8h.html#ab194b4b2fa261462b2a38b239498cc68">hd44780_port_status_t</a> HD44780_Port_Send_Byte </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>byteWrite</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>rs</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escribe un byte completo al LCD (en dos fases de 4 bits). </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">byteWrite</td><td>Byte a escribir. </td></tr>
+    <tr><td class="paramname">rs</td><td>Si es true, se interpreta como registro de dato. Si es false, se interpreta como registro de instrucción.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>El envío se realiza en modo 4 bits, dividiendo el byte en dos nibbles (alto y bajo).</p>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">HD44780_PORT_OK</td><td>La operación fue exitosa. </td></tr>
+    <tr><td class="paramname">HD44780_PORT_ERROR</td><td>Hubo un error en la comunicación con el LCD. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa2806bea81228f2954e72bfc274bda19" name="aa2806bea81228f2954e72bfc274bda19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2806bea81228f2954e72bfc274bda19">&#9670;&#160;</a></span>HD44780_Port_Send_Nibble()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_h_d44780__port_8h.html#ab194b4b2fa261462b2a38b239498cc68">hd44780_port_status_t</a> HD44780_Port_Send_Nibble </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>nibbleWrite</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>rs</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Envía un nibble (4 bits) al display HD44780 mediante la expansión I2C del PCF8574. </p>
+<p>Envía un nibble (4 bits) al LCD HD44780.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nibbleWrite</td><td>Nibble (4 bits) a enviar. </td></tr>
+    <tr><td class="paramname">rs</td><td>Indica si se trata de una instrucción (false) o un dato (true).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>El PCF8574 es un expansor de E/S que comunica 8 bits a través de I2C. Cada bit del PCF8574 se conecta a un pin del controlador HD44780 de la siguiente forma típica:</p>
+<ul>
+<li>P0 -&gt; RS (Register Select)</li>
+<li>P1 -&gt; RW (Read/Write)</li>
+<li>P2 -&gt; EN (Enable)</li>
+<li>P3 -&gt; Retroiluminación (Backlight control)</li>
+<li>P4 -&gt; DB4 (Data Bit 4)</li>
+<li>P5 -&gt; DB5 (Data Bit 5)</li>
+<li>P6 -&gt; DB6 (Data Bit 6)</li>
+<li>P7 -&gt; DB7 (Data Bit 7)</li>
+</ul>
+<p>Como el HD44780 está configurado en modo de 4 bits, sólo se utilizan las líneas DB7–DB4 para la transferencia de datos.</p>
+<p>Procedimiento:</p><ol type="1">
+<li>El nibble (4 bits) a transmitir se coloca en los bits P4–P7 del PCF8574. Para eso, se realiza un corrimiento de 4 posiciones a la izquierda (<code>nibbleWrite &lt;&lt; 4</code>).</li>
+<li>Se combinan las señales de control:<ul>
+<li>RS indica si lo transmitido es un comando (RS=0) o datos de usuario (RS=1).</li>
+<li>RW siempre está en 0 (modo escritura).</li>
+<li>EN se coloca en 1 para indicar un flanco activo de habilitación.</li>
+<li>Backlight (BL) se fuerza en 1 para mantener encendida la retroiluminación.</li>
+</ul>
+</li>
+<li>Se transmite el byte completo vía I2C al PCF8574.</li>
+<li>Luego de un pequeño retardo, se baja el bit EN a 0 para generar el flanco de bajada, lo que "latchea" los datos en el HD44780.</li>
+</ol>
+<p>Notas:</p><ul>
+<li>El proceso de escritura de un byte completo al LCD requiere el envío de dos nibbles consecutivos: primero el nibble alto y luego el nibble bajo (ver <code>HD44780_Port_Send_Byte</code>).</li>
+<li>Se utiliza un pequeño retardo de aproximadamente 1 ms entre las operaciones para cumplir con los requisitos de tiempo de establecimiento y retención del HD44780. </li>
+</ul>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de variables</h2>
+<a id="af7b2c26e44dadaaa798a5c3d82914ba7" name="af7b2c26e44dadaaa798a5c3d82914ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7b2c26e44dadaaa798a5c3d82914ba7">&#9670;&#160;</a></span>hi2c1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">I2C_HandleTypeDef hi2c1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel extern">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Manejador de la interfaz I2C definida en el proyecto </p>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BMP280_Display_Station: Referencia del archivo C:/Users/Noxie/Desktop/PdM-practicas/Trabajo_Final/BMP280_Display_Station/Core/API/HD44780/Inc/HD44780_port.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">BMP280_Display_Station<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Trabajo práctico final - PCSE - PdM - CESE</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e2b2265a4c9bde5c5d6085b1fcc82cb8.html">BMP280_Display_Station</a></li><li class="navelem"><a class="el" href="dir_446b09c6b56895b377ee9d9e29f9c883.html">Core</a></li><li class="navelem"><a class="el" href="dir_8835e12ddf74463c939342ccbda43e39.html">API</a></li><li class="navelem"><a class="el" href="dir_93ee93e47e3ad994d0821d60a0becbc3.html">HD44780</a></li><li class="navelem"><a class="el" href="dir_b762ddaaf476412e6342ce0e886818b7.html">Inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#enum-members">Enumeraciones</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo HD44780_port.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Interfaz de bajo nivel para la comunicación con el controlador LCD HD44780 mediante I2C.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &quot;stm32f4xx_hal.h&quot;</code><br />
+</div>
+<p><a href="_h_d44780__port_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:ac72da9845e02d812f88c208986ac5f4e" id="r_ac72da9845e02d812f88c208986ac5f4e"><td class="memItemLeft" align="right" valign="top"><a id="ac72da9845e02d812f88c208986ac5f4e" name="ac72da9845e02d812f88c208986ac5f4e"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>DEV_ADDRESS</b>&#160;&#160;&#160;0x27</td></tr>
+<tr class="memdesc:ac72da9845e02d812f88c208986ac5f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dirección del esclavo I2C correspondiente al expansor PCF8574. <br /></td></tr>
+<tr class="separator:ac72da9845e02d812f88c208986ac5f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:ab194b4b2fa261462b2a38b239498cc68" id="r_ab194b4b2fa261462b2a38b239498cc68"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab194b4b2fa261462b2a38b239498cc68">hd44780_port_status_t</a> { <a class="el" href="#ab194b4b2fa261462b2a38b239498cc68afea83b9253355c78ae1b29b3812d6170">HD44780_PORT_OK</a> = 0
+, <a class="el" href="#ab194b4b2fa261462b2a38b239498cc68ae72051b65e42ab48969f4760b3c88b5f">HD44780_PORT_ERROR</a>
+ }</td></tr>
+<tr class="memdesc:ab194b4b2fa261462b2a38b239498cc68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Códigos de estado para las operaciones del puerto PCF8574.  <a href="#ab194b4b2fa261462b2a38b239498cc68">Más...</a><br /></td></tr>
+<tr class="separator:ab194b4b2fa261462b2a38b239498cc68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a93b6001f93049c307c30230fdc8c109f" id="r_a93b6001f93049c307c30230fdc8c109f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab194b4b2fa261462b2a38b239498cc68">hd44780_port_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a93b6001f93049c307c30230fdc8c109f">HD44780_Port_Init</a> (void)</td></tr>
+<tr class="memdesc:a93b6001f93049c307c30230fdc8c109f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa la interfaz usada por el HD44780.  <br /></td></tr>
+<tr class="separator:a93b6001f93049c307c30230fdc8c109f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aef9a88f9e1e4213fabaf9e2e2b6c69" id="r_a7aef9a88f9e1e4213fabaf9e2e2b6c69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7aef9a88f9e1e4213fabaf9e2e2b6c69">HD44780_Port_Delay</a> (uint32_t delay)</td></tr>
+<tr class="memdesc:a7aef9a88f9e1e4213fabaf9e2e2b6c69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Realiza una espera bloqueante en milisegundos.  <br /></td></tr>
+<tr class="separator:a7aef9a88f9e1e4213fabaf9e2e2b6c69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2806bea81228f2954e72bfc274bda19" id="r_aa2806bea81228f2954e72bfc274bda19"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab194b4b2fa261462b2a38b239498cc68">hd44780_port_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2806bea81228f2954e72bfc274bda19">HD44780_Port_Send_Nibble</a> (uint8_t nibbleWrite, bool rs)</td></tr>
+<tr class="memdesc:aa2806bea81228f2954e72bfc274bda19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envía un nibble (4 bits) al LCD HD44780.  <br /></td></tr>
+<tr class="separator:aa2806bea81228f2954e72bfc274bda19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8816c8a80d789637e31cfe63052df5ce" id="r_a8816c8a80d789637e31cfe63052df5ce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#ab194b4b2fa261462b2a38b239498cc68">hd44780_port_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8816c8a80d789637e31cfe63052df5ce">HD44780_Port_Send_Byte</a> (uint8_t byteWrite, bool rs)</td></tr>
+<tr class="memdesc:a8816c8a80d789637e31cfe63052df5ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe un byte completo al LCD (en dos fases de 4 bits).  <br /></td></tr>
+<tr class="separator:a8816c8a80d789637e31cfe63052df5ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Interfaz de bajo nivel para la comunicación con el controlador LCD HD44780 mediante I2C. </p>
+<dl class="section author"><dt>Autor</dt><dd>Ing. Lucas Kirschner </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>10 Apr 2025 </dd></dl>
+<p>Este archivo declara las funciones necesarias para inicializar y enviar datos al LCD HD44780, encapsulando la lógica de transmisión en modo 4 bits sobre una interfaz I2C con expansor. </p>
+</div><h2 class="groupheader">Documentación de enumeraciones</h2>
+<a id="ab194b4b2fa261462b2a38b239498cc68" name="ab194b4b2fa261462b2a38b239498cc68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab194b4b2fa261462b2a38b239498cc68">&#9670;&#160;</a></span>hd44780_port_status_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#ab194b4b2fa261462b2a38b239498cc68">hd44780_port_status_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Códigos de estado para las operaciones del puerto PCF8574. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="ab194b4b2fa261462b2a38b239498cc68afea83b9253355c78ae1b29b3812d6170" name="ab194b4b2fa261462b2a38b239498cc68afea83b9253355c78ae1b29b3812d6170"></a>HD44780_PORT_OK&#160;</td><td class="fielddoc"><p>Operación exitosa </p>
+</td></tr>
+<tr><td class="fieldname"><a id="ab194b4b2fa261462b2a38b239498cc68ae72051b65e42ab48969f4760b3c88b5f" name="ab194b4b2fa261462b2a38b239498cc68ae72051b65e42ab48969f4760b3c88b5f"></a>HD44780_PORT_ERROR&#160;</td><td class="fielddoc"><p>Error en la comunicación </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a7aef9a88f9e1e4213fabaf9e2e2b6c69" name="a7aef9a88f9e1e4213fabaf9e2e2b6c69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7aef9a88f9e1e4213fabaf9e2e2b6c69">&#9670;&#160;</a></span>HD44780_Port_Delay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void HD44780_Port_Delay </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t</td>          <td class="paramname"><span class="paramname"><em>delay</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Realiza una espera bloqueante en milisegundos. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">delay</td><td>Tiempo de espera en milisegundos. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a93b6001f93049c307c30230fdc8c109f" name="a93b6001f93049c307c30230fdc8c109f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93b6001f93049c307c30230fdc8c109f">&#9670;&#160;</a></span>HD44780_Port_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab194b4b2fa261462b2a38b239498cc68">hd44780_port_status_t</a> HD44780_Port_Init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa la interfaz usada por el HD44780. </p>
+<p>Esta función puede incluir configuraciones específicas del periférico I2C si fuera necesario. En esta implementación, se asume que la inicialización se realiza externamente mediante la HAL. </p>
+
+</div>
+</div>
+<a id="a8816c8a80d789637e31cfe63052df5ce" name="a8816c8a80d789637e31cfe63052df5ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8816c8a80d789637e31cfe63052df5ce">&#9670;&#160;</a></span>HD44780_Port_Send_Byte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab194b4b2fa261462b2a38b239498cc68">hd44780_port_status_t</a> HD44780_Port_Send_Byte </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>byteWrite</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>rs</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escribe un byte completo al LCD (en dos fases de 4 bits). </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">byteWrite</td><td>Byte a escribir. </td></tr>
+    <tr><td class="paramname">rs</td><td>Si es true, se interpreta como registro de dato. Si es false, se interpreta como registro de instrucción.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>El envío se realiza en modo 4 bits, dividiendo el byte en dos nibbles (alto y bajo).</p>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">HD44780_PORT_OK</td><td>La operación fue exitosa. </td></tr>
+    <tr><td class="paramname">HD44780_PORT_ERROR</td><td>Hubo un error en la comunicación con el LCD. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa2806bea81228f2954e72bfc274bda19" name="aa2806bea81228f2954e72bfc274bda19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa2806bea81228f2954e72bfc274bda19">&#9670;&#160;</a></span>HD44780_Port_Send_Nibble()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#ab194b4b2fa261462b2a38b239498cc68">hd44780_port_status_t</a> HD44780_Port_Send_Nibble </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>nibbleWrite</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>rs</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Envía un nibble (4 bits) al LCD HD44780. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nibbleWrite</td><td>Nibble a escribir (en los bits bajos). </td></tr>
+    <tr><td class="paramname">rs</td><td>Si es true, se interpreta como registro de dato. Si es false, se interpreta como registro de instrucción.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Esta función se utiliza principalmente durante la inicialización y para la escritura en modo 4 bits.</p>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">HD44780_PORT_OK</td><td>La operación fue exitosa. </td></tr>
+    <tr><td class="paramname">HD44780_PORT_ERROR</td><td>Hubo un error en la comunicación con el LCD.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Envía un nibble (4 bits) al LCD HD44780.</p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nibbleWrite</td><td>Nibble (4 bits) a enviar. </td></tr>
+    <tr><td class="paramname">rs</td><td>Indica si se trata de una instrucción (false) o un dato (true).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>El PCF8574 es un expansor de E/S que comunica 8 bits a través de I2C. Cada bit del PCF8574 se conecta a un pin del controlador HD44780 de la siguiente forma típica:</p>
+<ul>
+<li>P0 -&gt; RS (Register Select)</li>
+<li>P1 -&gt; RW (Read/Write)</li>
+<li>P2 -&gt; EN (Enable)</li>
+<li>P3 -&gt; Retroiluminación (Backlight control)</li>
+<li>P4 -&gt; DB4 (Data Bit 4)</li>
+<li>P5 -&gt; DB5 (Data Bit 5)</li>
+<li>P6 -&gt; DB6 (Data Bit 6)</li>
+<li>P7 -&gt; DB7 (Data Bit 7)</li>
+</ul>
+<p>Como el HD44780 está configurado en modo de 4 bits, sólo se utilizan las líneas DB7–DB4 para la transferencia de datos.</p>
+<p>Procedimiento:</p><ol type="1">
+<li>El nibble (4 bits) a transmitir se coloca en los bits P4–P7 del PCF8574. Para eso, se realiza un corrimiento de 4 posiciones a la izquierda (<code>nibbleWrite &lt;&lt; 4</code>).</li>
+<li>Se combinan las señales de control:<ul>
+<li>RS indica si lo transmitido es un comando (RS=0) o datos de usuario (RS=1).</li>
+<li>RW siempre está en 0 (modo escritura).</li>
+<li>EN se coloca en 1 para indicar un flanco activo de habilitación.</li>
+<li>Backlight (BL) se fuerza en 1 para mantener encendida la retroiluminación.</li>
+</ul>
+</li>
+<li>Se transmite el byte completo vía I2C al PCF8574.</li>
+<li>Luego de un pequeño retardo, se baja el bit EN a 0 para generar el flanco de bajada, lo que "latchea" los datos en el HD44780.</li>
+</ol>
+<p>Notas:</p><ul>
+<li>El proceso de escritura de un byte completo al LCD requiere el envío de dos nibbles consecutivos: primero el nibble alto y luego el nibble bajo (ver <code>HD44780_Port_Send_Byte</code>).</li>
+<li>Se utiliza un pequeño retardo de aproximadamente 1 ms entre las operaciones para cumplir con los requisitos de tiempo de establecimiento y retención del HD44780. </li>
+</ul>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

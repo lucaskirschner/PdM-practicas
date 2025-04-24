@@ -1,0 +1,423 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BMP280_Display_Station: Referencia del archivo C:/Users/Noxie/Desktop/PdM-practicas/Trabajo_Final/BMP280_Display_Station/Core/API/HD44780/Inc/HD44780.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">BMP280_Display_Station<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Trabajo práctico final - PCSE - PdM - CESE</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e2b2265a4c9bde5c5d6085b1fcc82cb8.html">BMP280_Display_Station</a></li><li class="navelem"><a class="el" href="dir_446b09c6b56895b377ee9d9e29f9c883.html">Core</a></li><li class="navelem"><a class="el" href="dir_8835e12ddf74463c939342ccbda43e39.html">API</a></li><li class="navelem"><a class="el" href="dir_93ee93e47e3ad994d0821d60a0becbc3.html">HD44780</a></li><li class="navelem"><a class="el" href="dir_b762ddaaf476412e6342ce0e886818b7.html">Inc</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#enum-members">Enumeraciones</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo HD44780.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Definiciones y configuraciones para el controlador LCD HD44780.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_h_d44780__port_8h_source.html">HD44780_port.h</a>&quot;</code><br />
+</div>
+<p><a href="_h_d44780_8h_source.html">Ir al código fuente de este archivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a7a0fa529d8c2cd03e0438e546f7fc3a8" id="r_a7a0fa529d8c2cd03e0438e546f7fc3a8"><td class="memItemLeft" align="right" valign="top"><a id="a7a0fa529d8c2cd03e0438e546f7fc3a8" name="a7a0fa529d8c2cd03e0438e546f7fc3a8"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ROW_NUMBERS</b>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a7a0fa529d8c2cd03e0438e546f7fc3a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe93ff466ac5a6ef5cd4cf66b17fc9ee" id="r_abe93ff466ac5a6ef5cd4cf66b17fc9ee"><td class="memItemLeft" align="right" valign="top"><a id="abe93ff466ac5a6ef5cd4cf66b17fc9ee" name="abe93ff466ac5a6ef5cd4cf66b17fc9ee"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>COLUMN_NUMBERS</b>&#160;&#160;&#160;16</td></tr>
+<tr class="separator:abe93ff466ac5a6ef5cd4cf66b17fc9ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabbd352944fa95fe44d6af0dc8b3e4c0b" id="r_gabbd352944fa95fe44d6af0dc8b3e4c0b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___i_r___instructions.html#gabbd352944fa95fe44d6af0dc8b3e4c0b">IR_CLEAR_DISPLAY</a>&#160;&#160;&#160;0x01</td></tr>
+<tr class="separator:gabbd352944fa95fe44d6af0dc8b3e4c0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4b03384ff62e6b882e4940db13fdf15f" id="r_ga4b03384ff62e6b882e4940db13fdf15f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___i_r___instructions.html#ga4b03384ff62e6b882e4940db13fdf15f">IR_RETURN_HOME</a>&#160;&#160;&#160;0x02</td></tr>
+<tr class="separator:ga4b03384ff62e6b882e4940db13fdf15f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2f3db200e5cb76c317f28e89df879a8f" id="r_ga2f3db200e5cb76c317f28e89df879a8f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___i_r___instructions.html#ga2f3db200e5cb76c317f28e89df879a8f">IR_ENTRY_MODE_SET</a>(ID,  S)</td></tr>
+<tr class="memdesc:ga2f3db200e5cb76c317f28e89df879a8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Genera instrucción de configuración de modo de entrada.  <br /></td></tr>
+<tr class="separator:ga2f3db200e5cb76c317f28e89df879a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4c239366d2a36ea9e06ee07f6025b4a5" id="r_ga4c239366d2a36ea9e06ee07f6025b4a5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___i_r___instructions.html#ga4c239366d2a36ea9e06ee07f6025b4a5">IR_DISPLAY_CONTROL</a>(D,  C,  B)</td></tr>
+<tr class="memdesc:ga4c239366d2a36ea9e06ee07f6025b4a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Genera instrucción de control de visualización.  <br /></td></tr>
+<tr class="separator:ga4c239366d2a36ea9e06ee07f6025b4a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga658f73d69948dcf36b75ea247faeff01" id="r_ga658f73d69948dcf36b75ea247faeff01"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___i_r___instructions.html#ga658f73d69948dcf36b75ea247faeff01">IR_CURSOR_DISPLAY_SHIFT</a>(SC,  RL)</td></tr>
+<tr class="memdesc:ga658f73d69948dcf36b75ea247faeff01"><td class="mdescLeft">&#160;</td><td class="mdescRight">Genera instrucción de desplazamiento de cursor/display.  <br /></td></tr>
+<tr class="separator:ga658f73d69948dcf36b75ea247faeff01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a92d9abfdfc1fe00d9cc7c6d017a500" id="r_ga0a92d9abfdfc1fe00d9cc7c6d017a500"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___i_r___instructions.html#ga0a92d9abfdfc1fe00d9cc7c6d017a500">IR_FUNCTION_SET</a>(DL,  N,  F)</td></tr>
+<tr class="memdesc:ga0a92d9abfdfc1fe00d9cc7c6d017a500"><td class="mdescLeft">&#160;</td><td class="mdescRight">Genera instrucción de configuración de interfaz.  <br /></td></tr>
+<tr class="separator:ga0a92d9abfdfc1fe00d9cc7c6d017a500"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadab8d2a678fdb0f8e2720ba89339e138" id="r_gadab8d2a678fdb0f8e2720ba89339e138"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___i_r___instructions.html#gadab8d2a678fdb0f8e2720ba89339e138">IR_SET_CGRAM_ADDR</a>(addr)</td></tr>
+<tr class="memdesc:gadab8d2a678fdb0f8e2720ba89339e138"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece la dirección de memoria CGRAM.  <br /></td></tr>
+<tr class="separator:gadab8d2a678fdb0f8e2720ba89339e138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0b1b64d6aaaeda24dbec4698b79e184f" id="r_ga0b1b64d6aaaeda24dbec4698b79e184f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___i_r___instructions.html#ga0b1b64d6aaaeda24dbec4698b79e184f">IR_SET_DDRAM_ADDR</a>(addr)</td></tr>
+<tr class="memdesc:ga0b1b64d6aaaeda24dbec4698b79e184f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Establece la dirección de memoria DDRAM.  <br /></td></tr>
+<tr class="separator:ga0b1b64d6aaaeda24dbec4698b79e184f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4d2996839a1a5d70afb8fa28f6ddac57" id="r_ga4d2996839a1a5d70afb8fa28f6ddac57"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___options.html#ga4d2996839a1a5d70afb8fa28f6ddac57">LCD_ENTRY_INCREMENT</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ga4d2996839a1a5d70afb8fa28f6ddac57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf9be94eafd9dfc65248df8a6433ca23f" id="r_gaf9be94eafd9dfc65248df8a6433ca23f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___options.html#gaf9be94eafd9dfc65248df8a6433ca23f">LCD_ENTRY_DECREMENT</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:gaf9be94eafd9dfc65248df8a6433ca23f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab7068885c1f066a33698bcf709d86a73" id="r_gab7068885c1f066a33698bcf709d86a73"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___options.html#gab7068885c1f066a33698bcf709d86a73">LCD_ENTRY_SHIFT_ON</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:gab7068885c1f066a33698bcf709d86a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8473808ff40b0b35e0fed53b2bf91978" id="r_ga8473808ff40b0b35e0fed53b2bf91978"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___options.html#ga8473808ff40b0b35e0fed53b2bf91978">LCD_ENTRY_SHIFT_OFF</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ga8473808ff40b0b35e0fed53b2bf91978"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga846dac5d1bb72bef7a76ee110c0445b6" id="r_ga846dac5d1bb72bef7a76ee110c0445b6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___options.html#ga846dac5d1bb72bef7a76ee110c0445b6">LCD_DISPLAY_ON</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ga846dac5d1bb72bef7a76ee110c0445b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab1b96426e59139b68ae95df45d697087" id="r_gab1b96426e59139b68ae95df45d697087"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___options.html#gab1b96426e59139b68ae95df45d697087">LCD_DISPLAY_OFF</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:gab1b96426e59139b68ae95df45d697087"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8dae7021acb10d4e5f8458a5fba78729" id="r_ga8dae7021acb10d4e5f8458a5fba78729"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___options.html#ga8dae7021acb10d4e5f8458a5fba78729">LCD_CURSOR_ON</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ga8dae7021acb10d4e5f8458a5fba78729"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7a6a930d205b2819be910af194576dca" id="r_ga7a6a930d205b2819be910af194576dca"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___options.html#ga7a6a930d205b2819be910af194576dca">LCD_CURSOR_OFF</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ga7a6a930d205b2819be910af194576dca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga654ab1d84354662d394a62be3b2230d1" id="r_ga654ab1d84354662d394a62be3b2230d1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___options.html#ga654ab1d84354662d394a62be3b2230d1">LCD_BLINK_ON</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ga654ab1d84354662d394a62be3b2230d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3480b863e1e145d9a258de170fc44ffa" id="r_ga3480b863e1e145d9a258de170fc44ffa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___options.html#ga3480b863e1e145d9a258de170fc44ffa">LCD_BLINK_OFF</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ga3480b863e1e145d9a258de170fc44ffa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8ef8c05d43d77d16e131eb718ae4ac7" id="r_gae8ef8c05d43d77d16e131eb718ae4ac7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___options.html#gae8ef8c05d43d77d16e131eb718ae4ac7">LCD_SHIFT_DISPLAY</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:gae8ef8c05d43d77d16e131eb718ae4ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7bd7034ad5f552265a6baefeb79f9c5b" id="r_ga7bd7034ad5f552265a6baefeb79f9c5b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___options.html#ga7bd7034ad5f552265a6baefeb79f9c5b">LCD_SHIFT_CURSOR</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ga7bd7034ad5f552265a6baefeb79f9c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga8ab3108396a0d33dbf7f3ab6477ba01d" id="r_ga8ab3108396a0d33dbf7f3ab6477ba01d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___options.html#ga8ab3108396a0d33dbf7f3ab6477ba01d">LCD_SHIFT_RIGHT</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ga8ab3108396a0d33dbf7f3ab6477ba01d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga941377571f34b9d898b61ce89f10226d" id="r_ga941377571f34b9d898b61ce89f10226d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___options.html#ga941377571f34b9d898b61ce89f10226d">LCD_SHIFT_LEFT</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ga941377571f34b9d898b61ce89f10226d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadd5d8fc1095454b573485ed9d26b37c2" id="r_gadd5d8fc1095454b573485ed9d26b37c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___options.html#gadd5d8fc1095454b573485ed9d26b37c2">LCD_INTERFACE_8BIT</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:gadd5d8fc1095454b573485ed9d26b37c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafe632a73e84a82148ad81d8d47e33719" id="r_gafe632a73e84a82148ad81d8d47e33719"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___options.html#gafe632a73e84a82148ad81d8d47e33719">LCD_INTERFACE_4BIT</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:gafe632a73e84a82148ad81d8d47e33719"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga24032a2aad65aeb9971f851b81ef6ed7" id="r_ga24032a2aad65aeb9971f851b81ef6ed7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___options.html#ga24032a2aad65aeb9971f851b81ef6ed7">LCD_DISPLAY_2LINE</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ga24032a2aad65aeb9971f851b81ef6ed7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga13b6327c9c87e590e00b1145e23c0a65" id="r_ga13b6327c9c87e590e00b1145e23c0a65"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___options.html#ga13b6327c9c87e590e00b1145e23c0a65">LCD_DISPLAY_1LINE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ga13b6327c9c87e590e00b1145e23c0a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacbd2a634779d98e1b4808c17a41930a2" id="r_gacbd2a634779d98e1b4808c17a41930a2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___options.html#gacbd2a634779d98e1b4808c17a41930a2">LCD_FONT_5x10</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:gacbd2a634779d98e1b4808c17a41930a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2ed8cb3b5f9d21de022bcca5afe46ab5" id="r_ga2ed8cb3b5f9d21de022bcca5afe46ab5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___h_d44780___options.html#ga2ed8cb3b5f9d21de022bcca5afe46ab5">LCD_FONT_5x8</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:ga2ed8cb3b5f9d21de022bcca5afe46ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumeraciones</h2></td></tr>
+<tr class="memitem:a5b4eb71bfdc7f3be8f08cfbc218e0c98" id="r_a5b4eb71bfdc7f3be8f08cfbc218e0c98"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b4eb71bfdc7f3be8f08cfbc218e0c98">hd44780_status_t</a> { <a class="el" href="#a5b4eb71bfdc7f3be8f08cfbc218e0c98a8d46b953479b20d2286ee8142f06a5b7">HD44780_OK</a> = 0
+, <a class="el" href="#a5b4eb71bfdc7f3be8f08cfbc218e0c98a5139b81d8ce10eb245a416e808812a0f">HD44780_ERROR_PARAM</a>
+, <a class="el" href="#a5b4eb71bfdc7f3be8f08cfbc218e0c98a3a0d5e6ae6223b2c6b738082da8361f3">HD44780_ERROR_COMM</a>
+ }</td></tr>
+<tr class="memdesc:a5b4eb71bfdc7f3be8f08cfbc218e0c98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estados posibles que pueden devolver las funciones del driver.  <a href="#a5b4eb71bfdc7f3be8f08cfbc218e0c98">Más...</a><br /></td></tr>
+<tr class="separator:a5b4eb71bfdc7f3be8f08cfbc218e0c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:aa361a09cf07b67a62f158cf11d21dfff" id="r_aa361a09cf07b67a62f158cf11d21dfff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a5b4eb71bfdc7f3be8f08cfbc218e0c98">hd44780_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa361a09cf07b67a62f158cf11d21dfff">HD44780_Init</a> (void)</td></tr>
+<tr class="memdesc:aa361a09cf07b67a62f158cf11d21dfff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa el controlador LCD HD44780.  <br /></td></tr>
+<tr class="separator:aa361a09cf07b67a62f158cf11d21dfff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9858d1f0ec6a46b1b9dd1097766b259f" id="r_a9858d1f0ec6a46b1b9dd1097766b259f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a5b4eb71bfdc7f3be8f08cfbc218e0c98">hd44780_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9858d1f0ec6a46b1b9dd1097766b259f">HD44780_Write</a> (uint8_t *dataWrite)</td></tr>
+<tr class="memdesc:a9858d1f0ec6a46b1b9dd1097766b259f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe una cadena de caracteres en el display.  <br /></td></tr>
+<tr class="separator:a9858d1f0ec6a46b1b9dd1097766b259f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a664a729f6ebf213b1d9198917df646" id="r_a4a664a729f6ebf213b1d9198917df646"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a5b4eb71bfdc7f3be8f08cfbc218e0c98">hd44780_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4a664a729f6ebf213b1d9198917df646">HD44780_Clear</a> (void)</td></tr>
+<tr class="memdesc:a4a664a729f6ebf213b1d9198917df646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limpia el contenido del display.  <br /></td></tr>
+<tr class="separator:a4a664a729f6ebf213b1d9198917df646"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9430ce25163add5428ab4fa3cac3a16" id="r_ad9430ce25163add5428ab4fa3cac3a16"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a5b4eb71bfdc7f3be8f08cfbc218e0c98">hd44780_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad9430ce25163add5428ab4fa3cac3a16">HD44780_Set_Cursor</a> (uint8_t row, uint8_t column)</td></tr>
+<tr class="memdesc:ad9430ce25163add5428ab4fa3cac3a16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posiciona el cursor en una ubicación específica.  <br /></td></tr>
+<tr class="separator:ad9430ce25163add5428ab4fa3cac3a16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f80e5c82768b86381e67adb6b4a90c2" id="r_a2f80e5c82768b86381e67adb6b4a90c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a5b4eb71bfdc7f3be8f08cfbc218e0c98">hd44780_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f80e5c82768b86381e67adb6b4a90c2">HD44780_Write_int</a> (int16_t value)</td></tr>
+<tr class="memdesc:a2f80e5c82768b86381e67adb6b4a90c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Escribe un valor entero en el display.  <br /></td></tr>
+<tr class="separator:a2f80e5c82768b86381e67adb6b4a90c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Definiciones y configuraciones para el controlador LCD HD44780. </p>
+<dl class="section author"><dt>Autor</dt><dd>Ing. Lucas Kirschner </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>10 Apr 2025 </dd></dl>
+<p>Este archivo define macros y funciones que permiten el manejo del controlador LCD HD44780.</p>
+<dl class="section note"><dt>Nota</dt><dd>Basado en especificaciones del datasheet oficial del HD44780. </dd></dl>
+</div><h2 class="groupheader">Documentación de enumeraciones</h2>
+<a id="a5b4eb71bfdc7f3be8f08cfbc218e0c98" name="a5b4eb71bfdc7f3be8f08cfbc218e0c98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b4eb71bfdc7f3be8f08cfbc218e0c98">&#9670;&#160;</a></span>hd44780_status_t</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a5b4eb71bfdc7f3be8f08cfbc218e0c98">hd44780_status_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Estados posibles que pueden devolver las funciones del driver. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Valores de enumeraciones</th></tr><tr><td class="fieldname"><a id="a5b4eb71bfdc7f3be8f08cfbc218e0c98a8d46b953479b20d2286ee8142f06a5b7" name="a5b4eb71bfdc7f3be8f08cfbc218e0c98a8d46b953479b20d2286ee8142f06a5b7"></a>HD44780_OK&#160;</td><td class="fielddoc"><p>Operación exitosa </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5b4eb71bfdc7f3be8f08cfbc218e0c98a5139b81d8ce10eb245a416e808812a0f" name="a5b4eb71bfdc7f3be8f08cfbc218e0c98a5139b81d8ce10eb245a416e808812a0f"></a>HD44780_ERROR_PARAM&#160;</td><td class="fielddoc"><p>Error en el parámetro pasado como argumento </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a5b4eb71bfdc7f3be8f08cfbc218e0c98a3a0d5e6ae6223b2c6b738082da8361f3" name="a5b4eb71bfdc7f3be8f08cfbc218e0c98a3a0d5e6ae6223b2c6b738082da8361f3"></a>HD44780_ERROR_COMM&#160;</td><td class="fielddoc"><p>Error de comunicación con el display </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a4a664a729f6ebf213b1d9198917df646" name="a4a664a729f6ebf213b1d9198917df646"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a664a729f6ebf213b1d9198917df646">&#9670;&#160;</a></span>HD44780_Clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a5b4eb71bfdc7f3be8f08cfbc218e0c98">hd44780_status_t</a> HD44780_Clear </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Limpia el contenido del display. </p>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">HD44780_OK</td><td>Limpieza exitosa. </td></tr>
+    <tr><td class="paramname">HD44780_ERROR_COMM</td><td>Error de comunicación con el display. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa361a09cf07b67a62f158cf11d21dfff" name="aa361a09cf07b67a62f158cf11d21dfff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa361a09cf07b67a62f158cf11d21dfff">&#9670;&#160;</a></span>HD44780_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a5b4eb71bfdc7f3be8f08cfbc218e0c98">hd44780_status_t</a> HD44780_Init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa el controlador LCD HD44780. </p>
+<p>Realiza la secuencia de inicialización manual recomendada cuando las condiciones de alimentación no aseguran el correcto funcionamiento del circuito de reset interno.</p>
+<dl class="section see"><dt>Ver también</dt><dd>HD44780 datasheet, sección "Initializing by Instruction".</dd></dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">HD44780_OK</td><td>Inicialización exitosa. </td></tr>
+    <tr><td class="paramname">HD44780_ERROR_COMM</td><td>Error de comunicación con el display.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Inicializa el controlador LCD HD44780.</p>
+<p>Esta función realiza la secuencia de inicialización recomendada por la hoja de datos del HD44780 para configurar la interfaz en modo de 4 bits. Aunque se usan sólo los pines D4-D7, el controlador LCD arranca por defecto en modo de 8 bits. Por lo tanto, es necesario enviar tres veces el comando Function Set (0x03) como si se tratara de una interfaz de 8 bits.</p>
+<p>Dado que sólo están conectados los pines D4-D7, se transmite únicamente el nibble alto 0x03, el cual el LCD interpreta como 0x30 (modo 8 bits). El LCD asume que el nibble bajo es 0 porque no hay señal conectada en D3-D0.</p>
+<p>Luego, se envía el nibble 0x02 para indicar que se usará modo 4 bits de forma definitiva. A partir de ese punto, todos los comandos se envían en dos nibbles (alto y bajo).</p>
+<p>La secuencia incluye los siguientes pasos:</p><ol type="1">
+<li>Inicialización del periférico</li>
+<li>Espera inicial tras el encendido (más de 15 ms después de que VCC haya subido a 4.5V).</li>
+<li>Envío de tres comandos para configurar el controlador en modo de 8 bits.</li>
+<li>Cambio a modo de 4 bits.</li>
+<li>Configuración de parámetros de operación como número de líneas y tipo de fuente.</li>
+<li>Apagado del display.</li>
+<li>Limpieza del display.</li>
+<li>Encendido del display.</li>
+<li>Configuración del modo de entrada (incremento de la dirección y sin desplazamiento de la pantalla).</li>
+</ol>
+<dl class="section note"><dt>Nota</dt><dd>Es importante respetar los tiempos mínimos entre comandos para asegurar la correcta inicialización del LCD.</dd></dl>
+<dl class="section see"><dt>Ver también</dt><dd>HD44780 datasheet, sección "Initialization" </dd></dl>
+
+</div>
+</div>
+<a id="ad9430ce25163add5428ab4fa3cac3a16" name="ad9430ce25163add5428ab4fa3cac3a16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9430ce25163add5428ab4fa3cac3a16">&#9670;&#160;</a></span>HD44780_Set_Cursor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a5b4eb71bfdc7f3be8f08cfbc218e0c98">hd44780_status_t</a> HD44780_Set_Cursor </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>row</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>column</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Posiciona el cursor en una ubicación específica. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">row</td><td>Fila (1 o 2). </td></tr>
+    <tr><td class="paramname">column</td><td>Columna (1–16).</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">HD44780_OK</td><td>Posicionamiento exitoso. </td></tr>
+    <tr><td class="paramname">HD44780_ERROR_PARAM</td><td>Parámetro de fila o columna fuera de rango. </td></tr>
+    <tr><td class="paramname">HD44780_ERROR_COMM</td><td>Error de comunicación con el display. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9858d1f0ec6a46b1b9dd1097766b259f" name="a9858d1f0ec6a46b1b9dd1097766b259f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9858d1f0ec6a46b1b9dd1097766b259f">&#9670;&#160;</a></span>HD44780_Write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a5b4eb71bfdc7f3be8f08cfbc218e0c98">hd44780_status_t</a> HD44780_Write </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>dataWrite</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escribe una cadena de caracteres en el display. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataWrite</td><td>Puntero a la cadena a enviar.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">HD44780_OK</td><td>Escritura exitosa. </td></tr>
+    <tr><td class="paramname">HD44780_ERROR_PARAM</td><td>El puntero a la cadena es NULL. </td></tr>
+    <tr><td class="paramname">HD44780_ERROR_COMM</td><td>Error de comunicación con el display. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2f80e5c82768b86381e67adb6b4a90c2" name="a2f80e5c82768b86381e67adb6b4a90c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f80e5c82768b86381e67adb6b4a90c2">&#9670;&#160;</a></span>HD44780_Write_int()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a5b4eb71bfdc7f3be8f08cfbc218e0c98">hd44780_status_t</a> HD44780_Write_int </td>
+          <td>(</td>
+          <td class="paramtype">int16_t</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Escribe un valor entero en el display. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>Valor entero a mostrar.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Valores devueltos</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">HD44780_OK</td><td>Escritura exitosa. </td></tr>
+    <tr><td class="paramname">HD44780_ERROR_COMM</td><td>Error de comunicación con el display. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

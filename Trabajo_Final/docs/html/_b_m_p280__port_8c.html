@@ -1,0 +1,277 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>BMP280_Display_Station: Referencia del archivo C:/Users/Noxie/Desktop/PdM-practicas/Trabajo_Final/BMP280_Display_Station/Core/API/BMP280/Src/BMP280_port.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+  $(function() { init_search(); });
+/* @license-end */
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">BMP280_Display_Station<span id="projectnumber">&#160;1.1</span>
+   </div>
+   <div id="projectbrief">Trabajo práctico final - PCSE - PdM - CESE</div>
+  </td>
+    <td>        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <span id="MSearchSelect"                onmouseover="return searchBox.OnSearchSelectShow()"                onmouseout="return searchBox.OnSearchSelectHide()">&#160;</span>
+          <input type="text" id="MSearchField" value="" placeholder="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.svg" alt=""/></a>
+          </span>
+        </div>
+</td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Cargando...</div>
+<div class="SRStatus" id="Searching">Buscando...</div>
+<div class="SRStatus" id="NoMatches">Nada coincide</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_e2b2265a4c9bde5c5d6085b1fcc82cb8.html">BMP280_Display_Station</a></li><li class="navelem"><a class="el" href="dir_446b09c6b56895b377ee9d9e29f9c883.html">Core</a></li><li class="navelem"><a class="el" href="dir_8835e12ddf74463c939342ccbda43e39.html">API</a></li><li class="navelem"><a class="el" href="dir_6cc249425bd7640a1787c10d39c7c600.html">BMP280</a></li><li class="navelem"><a class="el" href="dir_c9342d9caa7e38000acb3041daeb5029.html">Src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#define-members">defines</a> &#124;
+<a href="#func-members">Funciones</a>  </div>
+  <div class="headertitle"><div class="title">Referencia del archivo BMP280_port.c</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Implementación de la interfaz SPI de bajo nivel para el sensor BMP280.  
+<a href="#details">Más...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="_b_m_p280__port_8h_source.html">BMP280_port.h</a>&quot;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+defines</h2></td></tr>
+<tr class="memitem:a8fe847e1fd705110c6f54ede74af96ea" id="r_a8fe847e1fd705110c6f54ede74af96ea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fe847e1fd705110c6f54ede74af96ea">SPI_TIMEOUT_MS</a>&#160;&#160;&#160;50</td></tr>
+<tr class="separator:a8fe847e1fd705110c6f54ede74af96ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Funciones</h2></td></tr>
+<tr class="memitem:a904038e93228b17c4c6427d47704fcb0" id="r_a904038e93228b17c4c6427d47704fcb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_b_m_p280__port_8h.html#a5d6131886b9bfedb456b039da10de923">bmp280_port_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a904038e93228b17c4c6427d47704fcb0">BMP280_Port_Init</a> (void)</td></tr>
+<tr class="memdesc:a904038e93228b17c4c6427d47704fcb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa la interfaz usada por el BMP280.  <br /></td></tr>
+<tr class="separator:a904038e93228b17c4c6427d47704fcb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4d9d27327c48b110336623cd7c7ec26" id="r_aa4d9d27327c48b110336623cd7c7ec26"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_b_m_p280__port_8h.html#a5d6131886b9bfedb456b039da10de923">bmp280_port_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4d9d27327c48b110336623cd7c7ec26">BMP280_Write</a> (uint8_t *dataWrite, uint8_t size)</td></tr>
+<tr class="memdesc:aa4d9d27327c48b110336623cd7c7ec26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Envía datos al sensor BMP280 vía SPI.  <br /></td></tr>
+<tr class="separator:aa4d9d27327c48b110336623cd7c7ec26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9f30ee5bd090a7b4696d5ae14aef3dc" id="r_ab9f30ee5bd090a7b4696d5ae14aef3dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_b_m_p280__port_8h.html#a5d6131886b9bfedb456b039da10de923">bmp280_port_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9f30ee5bd090a7b4696d5ae14aef3dc">BMP280_Read</a> (uint8_t *dataRead, uint8_t size)</td></tr>
+<tr class="memdesc:ab9f30ee5bd090a7b4696d5ae14aef3dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Recibe datos desde el sensor BMP280 vía SPI.  <br /></td></tr>
+<tr class="separator:ab9f30ee5bd090a7b4696d5ae14aef3dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7760218c59b49dbf28ee0e747cb2e98a" id="r_a7760218c59b49dbf28ee0e747cb2e98a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="_b_m_p280__port_8h.html#a5d6131886b9bfedb456b039da10de923">bmp280_port_status_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7760218c59b49dbf28ee0e747cb2e98a">BMP280_Transfer</a> (uint8_t *dataWrite, uint8_t *dataRead, uint8_t size)</td></tr>
+<tr class="memdesc:a7760218c59b49dbf28ee0e747cb2e98a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Realiza una transferencia SPI completa (transmisión + recepción).  <br /></td></tr>
+<tr class="separator:a7760218c59b49dbf28ee0e747cb2e98a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descripción detallada</h2>
+<div class="textblock"><p>Implementación de la interfaz SPI de bajo nivel para el sensor BMP280. </p>
+<dl class="section author"><dt>Autor</dt><dd>Ing. Lucas Kirschner </dd></dl>
+<dl class="section date"><dt>Fecha</dt><dd>2 Apr 2025 </dd></dl>
+<p>Este archivo implementa las funciones de lectura, escritura y transferencia SPI que permiten la comunicación entre un microcontrolador STM32 y el sensor BMP280. </p>
+</div><h2 class="groupheader">Documentación de «define»</h2>
+<a id="a8fe847e1fd705110c6f54ede74af96ea" name="a8fe847e1fd705110c6f54ede74af96ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fe847e1fd705110c6f54ede74af96ea">&#9670;&#160;</a></span>SPI_TIMEOUT_MS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SPI_TIMEOUT_MS&#160;&#160;&#160;50</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Timeout para las transmisiones SPI </p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentación de funciones</h2>
+<a id="a904038e93228b17c4c6427d47704fcb0" name="a904038e93228b17c4c6427d47704fcb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a904038e93228b17c4c6427d47704fcb0">&#9670;&#160;</a></span>BMP280_Port_Init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_b_m_p280__port_8h.html#a5d6131886b9bfedb456b039da10de923">bmp280_port_status_t</a> BMP280_Port_Init </td>
+          <td>(</td>
+          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa la interfaz usada por el BMP280. </p>
+<p>Esta función puede incluir configuraciones específicas del periférico SPI si fuera necesario. En esta implementación, se asume que la inicialización se realiza externamente mediante la HAL. </p>
+
+</div>
+</div>
+<a id="ab9f30ee5bd090a7b4696d5ae14aef3dc" name="ab9f30ee5bd090a7b4696d5ae14aef3dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9f30ee5bd090a7b4696d5ae14aef3dc">&#9670;&#160;</a></span>BMP280_Read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_b_m_p280__port_8h.html#a5d6131886b9bfedb456b039da10de923">bmp280_port_status_t</a> BMP280_Read </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>dataRead</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Recibe datos desde el sensor BMP280 vía SPI. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataRead</td><td>Puntero al buffer donde se almacenarán los datos recibidos. </td></tr>
+    <tr><td class="paramname">size</td><td>Cantidad de bytes a recibir. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Estado de la operación (OK, ERROR o TIMEOUT). </dd></dl>
+
+</div>
+</div>
+<a id="a7760218c59b49dbf28ee0e747cb2e98a" name="a7760218c59b49dbf28ee0e747cb2e98a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7760218c59b49dbf28ee0e747cb2e98a">&#9670;&#160;</a></span>BMP280_Transfer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_b_m_p280__port_8h.html#a5d6131886b9bfedb456b039da10de923">bmp280_port_status_t</a> BMP280_Transfer </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>dataWrite</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>dataRead</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Realiza una transferencia SPI completa (transmisión + recepción). </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataWrite</td><td>Puntero al buffer de datos a transmitir. </td></tr>
+    <tr><td class="paramname">dataRead</td><td>Puntero al buffer donde se almacenarán los datos recibidos. </td></tr>
+    <tr><td class="paramname">size</td><td>Cantidad de bytes a transferir. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Estado de la operación (OK, ERROR o TIMEOUT). </dd></dl>
+
+</div>
+</div>
+<a id="aa4d9d27327c48b110336623cd7c7ec26" name="aa4d9d27327c48b110336623cd7c7ec26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4d9d27327c48b110336623cd7c7ec26">&#9670;&#160;</a></span>BMP280_Write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="_b_m_p280__port_8h.html#a5d6131886b9bfedb456b039da10de923">bmp280_port_status_t</a> BMP280_Write </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *</td>          <td class="paramname"><span class="paramname"><em>dataWrite</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Envía datos al sensor BMP280 vía SPI. </p>
+<dl class="params"><dt>Parámetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dataWrite</td><td>Puntero al buffer de datos a transmitir. </td></tr>
+    <tr><td class="paramname">size</td><td>Cantidad de bytes a transmitir. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Devuelve</dt><dd>Estado de la operación (OK, ERROR o TIMEOUT). </dd></dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
